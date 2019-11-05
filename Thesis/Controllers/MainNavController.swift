@@ -1,18 +1,17 @@
 //
-//  ViewController.swift
+//  MainNavController.swift
 //  Thesis
 //
-//  Created by Gavin Kaepernick on 10/29/19.
+//  Created by Gavin Kaepernick on 10/31/19.
 //  Copyright © 2019 Gavin Kaepernick. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-class ViewController: UIViewController {
+class MainNavController: UINavigationController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view.
+		
 	}
 }
-

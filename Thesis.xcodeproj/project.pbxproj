@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F1079FC02371DAD1000943EB /* ProjectCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1079FBF2371DAD1000943EB /* ProjectCells.swift */; };
+		F1079FC22371DB56000943EB /* ProjectsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1079FC12371DB56000943EB /* ProjectsList.swift */; };
+		F1079FC42371DC38000943EB /* projectTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1079FC32371DC38000943EB /* projectTableView.swift */; };
+		F138CCEA236B4C6600FC05DD /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F138CCE9236B4C6600FC05DD /* ProjectsViewController.swift */; };
+		F138CCEC236B4C7100FC05DD /* EstimatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F138CCEB236B4C7100FC05DD /* EstimatesViewController.swift */; };
+		F138CCEE236B4C7B00FC05DD /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F138CCED236B4C7B00FC05DD /* ContactsViewController.swift */; };
+		F1611FB2236B3EBC007DD83D /* MainNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1611FB1236B3EBC007DD83D /* MainNavController.swift */; };
+		F1611FB6236B41E5007DD83D /* accessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1611FB5236B41E5007DD83D /* accessViewController.swift */; };
+		F1611FB8236B49F9007DD83D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1611FB7236B49F9007DD83D /* HomeViewController.swift */; };
 		F1E29D4323690CAF00EF8B14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E29D4223690CAF00EF8B14 /* AppDelegate.swift */; };
 		F1E29D4523690CAF00EF8B14 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E29D4423690CAF00EF8B14 /* SceneDelegate.swift */; };
 		F1E29D4723690CAF00EF8B14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E29D4623690CAF00EF8B14 /* ViewController.swift */; };
@@ -14,9 +23,19 @@
 		F1E29D4D23690CAF00EF8B14 /* Thesis.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F1E29D4B23690CAF00EF8B14 /* Thesis.xcdatamodeld */; };
 		F1E29D4F23690CAF00EF8B14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1E29D4E23690CAF00EF8B14 /* Assets.xcassets */; };
 		F1E29D5223690CAF00EF8B14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1E29D5023690CAF00EF8B14 /* LaunchScreen.storyboard */; };
+		F1E29D5B23690E7A00EF8B14 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E29D5A23690E7A00EF8B14 /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F1079FBF2371DAD1000943EB /* ProjectCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCells.swift; sourceTree = "<group>"; };
+		F1079FC12371DB56000943EB /* ProjectsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsList.swift; sourceTree = "<group>"; };
+		F1079FC32371DC38000943EB /* projectTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = projectTableView.swift; sourceTree = "<group>"; };
+		F138CCE9236B4C6600FC05DD /* ProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
+		F138CCEB236B4C7100FC05DD /* EstimatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimatesViewController.swift; sourceTree = "<group>"; };
+		F138CCED236B4C7B00FC05DD /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		F1611FB1236B3EBC007DD83D /* MainNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavController.swift; sourceTree = "<group>"; };
+		F1611FB5236B41E5007DD83D /* accessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = accessViewController.swift; sourceTree = "<group>"; };
+		F1611FB7236B49F9007DD83D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F1E29D3F23690CAF00EF8B14 /* Thesis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Thesis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1E29D4223690CAF00EF8B14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1E29D4423690CAF00EF8B14 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +45,7 @@
 		F1E29D4E23690CAF00EF8B14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1E29D5123690CAF00EF8B14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F1E29D5323690CAF00EF8B14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1E29D5A23690E7A00EF8B14 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +59,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F1079FBE2371DA9F000943EB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F1079FBF2371DAD1000943EB /* ProjectCells.swift */,
+				F1079FC32371DC38000943EB /* projectTableView.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F1611FB0236B3EA7007DD83D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F1611FB1236B3EBC007DD83D /* MainNavController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		F1E29D3623690CAF00EF8B14 = {
 			isa = PBXGroup;
 			children = (
@@ -58,16 +95,41 @@
 		F1E29D4123690CAF00EF8B14 /* Thesis */ = {
 			isa = PBXGroup;
 			children = (
+				F1079FBE2371DA9F000943EB /* Models */,
+				F1611FB0236B3EA7007DD83D /* Controllers */,
+				F1E29D5923690E6400EF8B14 /* Design */,
+				F1E29D5C23690EE700EF8B14 /* Views */,
 				F1E29D4223690CAF00EF8B14 /* AppDelegate.swift */,
 				F1E29D4423690CAF00EF8B14 /* SceneDelegate.swift */,
-				F1E29D4623690CAF00EF8B14 /* ViewController.swift */,
 				F1E29D4823690CAF00EF8B14 /* Main.storyboard */,
 				F1E29D4E23690CAF00EF8B14 /* Assets.xcassets */,
 				F1E29D5023690CAF00EF8B14 /* LaunchScreen.storyboard */,
 				F1E29D5323690CAF00EF8B14 /* Info.plist */,
 				F1E29D4B23690CAF00EF8B14 /* Thesis.xcdatamodeld */,
+				F1E29D4623690CAF00EF8B14 /* ViewController.swift */,
 			);
 			path = Thesis;
+			sourceTree = "<group>";
+		};
+		F1E29D5923690E6400EF8B14 /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				F1E29D5A23690E7A00EF8B14 /* Utilities.swift */,
+			);
+			path = Design;
+			sourceTree = "<group>";
+		};
+		F1E29D5C23690EE700EF8B14 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F1611FB5236B41E5007DD83D /* accessViewController.swift */,
+				F1611FB7236B49F9007DD83D /* HomeViewController.swift */,
+				F138CCE9236B4C6600FC05DD /* ProjectsViewController.swift */,
+				F138CCEB236B4C7100FC05DD /* EstimatesViewController.swift */,
+				F138CCED236B4C7B00FC05DD /* ContactsViewController.swift */,
+				F1079FC12371DB56000943EB /* ProjectsList.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,10 +203,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1079FC22371DB56000943EB /* ProjectsList.swift in Sources */,
+				F1079FC42371DC38000943EB /* projectTableView.swift in Sources */,
 				F1E29D4723690CAF00EF8B14 /* ViewController.swift in Sources */,
+				F138CCEE236B4C7B00FC05DD /* ContactsViewController.swift in Sources */,
 				F1E29D4323690CAF00EF8B14 /* AppDelegate.swift in Sources */,
 				F1E29D4523690CAF00EF8B14 /* SceneDelegate.swift in Sources */,
+				F138CCEA236B4C6600FC05DD /* ProjectsViewController.swift in Sources */,
+				F1611FB8236B49F9007DD83D /* HomeViewController.swift in Sources */,
+				F1611FB6236B41E5007DD83D /* accessViewController.swift in Sources */,
+				F138CCEC236B4C7100FC05DD /* EstimatesViewController.swift in Sources */,
+				F1E29D5B23690E7A00EF8B14 /* Utilities.swift in Sources */,
+				F1611FB2236B3EBC007DD83D /* MainNavController.swift in Sources */,
 				F1E29D4D23690CAF00EF8B14 /* Thesis.xcdatamodeld in Sources */,
+				F1079FC02371DAD1000943EB /* ProjectCells.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
