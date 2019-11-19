@@ -10,8 +10,6 @@ import UIKit
 
 class HomeViewController: UIViewController {
 	@IBOutlet weak var projectsBtn: UIButton!
-	@IBOutlet weak var estimatesBtn: UIButton!
-	@IBOutlet weak var contactsBtn: UIButton!
 	
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,9 +20,6 @@ class HomeViewController: UIViewController {
 	
 	func setUpElements() {
 		Utilities.styleFilledBtn(projectsBtn)
-		Utilities.styleFilledBtn(estimatesBtn)
-		Utilities.styleFilledBtn(contactsBtn)
-
 	}
 	
 }

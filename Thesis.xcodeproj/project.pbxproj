@@ -129,7 +129,6 @@
 				F10B09DC237B1B8000DB4F24 /* GoogleService-Info.plist */,
 				F160F7182374884D00C8DEA0 /* Projects */,
 				F1079FBE2371DA9F000943EB /* Models */,
-				F1611FB0236B3EA7007DD83D /* Controllers */,
 				F1E29D5923690E6400EF8B14 /* Design */,
 				F1E29D5C23690EE700EF8B14 /* Views */,
 				F1E29D4223690CAF00EF8B14 /* AppDelegate.swift */,
@@ -140,6 +139,7 @@
 				F1E29D5323690CAF00EF8B14 /* Info.plist */,
 				F1E29D4B23690CAF00EF8B14 /* Thesis.xcdatamodeld */,
 				F1E29D4623690CAF00EF8B14 /* ViewController.swift */,
+				F1611FB0236B3EA7007DD83D /* Controllers */,
 			);
 			path = Thesis;
 			sourceTree = "<group>";

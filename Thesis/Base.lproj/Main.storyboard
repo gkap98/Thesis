@@ -103,7 +103,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="vgN-VI-5EB">
-                                <rect key="frame" x="100" y="283.66666666666669" width="214" height="275.00000000000006"/>
+                                <rect key="frame" x="100" y="383.66666666666669" width="214" height="75"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n5Y-PY-Ft4">
                                         <rect key="frame" x="0.0" y="0.0" width="214" height="75"/>
@@ -115,30 +115,6 @@
                                         <state key="normal" title="Projects"/>
                                         <connections>
                                             <segue destination="lUR-Zy-idI" kind="show" id="PdW-xL-7xs"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GqM-3Y-2g1">
-                                        <rect key="frame" x="0.0" y="100" width="214" height="75"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="Ybn-8B-UVb"/>
-                                            <constraint firstAttribute="height" constant="75" id="jKk-lr-vmi"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
-                                        <state key="normal" title="Estimates"/>
-                                        <connections>
-                                            <segue destination="Hmc-dU-mn7" kind="show" id="Csp-kB-KrT"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N6s-g7-O8i">
-                                        <rect key="frame" x="0.0" y="200" width="214" height="75"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="75" id="Qrz-fC-cqz"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="aCC-s1-pfi"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
-                                        <state key="normal" title="Contacts"/>
-                                        <connections>
-                                            <segue destination="e5z-k0-49y" kind="show" id="aUt-kg-H8A"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -165,8 +141,6 @@
                         <barButtonItem key="backBarButtonItem" title="Home" id="ua8-kc-Sn1"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="contactsBtn" destination="N6s-g7-O8i" id="uR9-j4-g4A"/>
-                        <outlet property="estimatesBtn" destination="GqM-3Y-2g1" id="nZu-hN-2mT"/>
                         <outlet property="projectsBtn" destination="n5Y-PY-Ft4" id="8Id-SG-GYf"/>
                     </connections>
                 </viewController>
@@ -193,17 +167,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="125"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u6B-pA-Hwd">
-                                                    <rect key="frame" x="12" y="12" width="165.66666666666666" height="101"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="u6B-pA-Hwd" secondAttribute="height" multiplier="146:89" id="kwL-od-Wm5"/>
-                                                    </constraints>
-                                                </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="j6o-wc-BnE">
-                                                    <rect key="frame" x="189.66666666666663" y="36" width="192.33333333333337" height="53"/>
+                                                    <rect key="frame" x="32" y="36" width="350" height="53"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ViF-NX-idh">
-                                                            <rect key="frame" x="0.0" y="0.0" width="192.33333333333334" height="28"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="350" height="28"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="29" id="zYj-el-Hdt"/>
                                                             </constraints>
@@ -212,7 +180,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="wgv-vY-CEm">
-                                                            <rect key="frame" x="0.0" y="32" width="192.33333333333334" height="21"/>
+                                                            <rect key="frame" x="0.0" y="32" width="350" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="21" id="Ehl-Uq-OLy"/>
                                                             </constraints>
@@ -228,19 +196,14 @@
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="u6B-pA-Hwd" secondAttribute="bottom" constant="12" id="2aO-wV-T5x"/>
-                                                <constraint firstItem="u6B-pA-Hwd" firstAttribute="top" secondItem="Y2r-h4-kcO" secondAttribute="top" constant="12" id="LU8-03-8mC"/>
-                                                <constraint firstItem="u6B-pA-Hwd" firstAttribute="centerY" secondItem="Y2r-h4-kcO" secondAttribute="centerY" id="OKD-c5-kWC"/>
-                                                <constraint firstItem="j6o-wc-BnE" firstAttribute="leading" secondItem="u6B-pA-Hwd" secondAttribute="trailing" constant="12" id="QjG-mD-XJU"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="j6o-wc-BnE" secondAttribute="bottom" constant="25" id="WA6-5j-ji0"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="j6o-wc-BnE" secondAttribute="trailing" constant="12" id="cdY-8W-xt7"/>
-                                                <constraint firstItem="u6B-pA-Hwd" firstAttribute="leading" secondItem="Y2r-h4-kcO" secondAttribute="leading" constant="12" id="kM4-7p-hQW"/>
+                                                <constraint firstItem="j6o-wc-BnE" firstAttribute="leading" secondItem="Y2r-h4-kcO" secondAttribute="leadingMargin" constant="12" id="rGx-gg-YV9"/>
                                                 <constraint firstItem="j6o-wc-BnE" firstAttribute="top" secondItem="Y2r-h4-kcO" secondAttribute="topMargin" constant="25" id="wMd-yl-k8z"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="addressLabel" destination="wgv-vY-CEm" id="n7T-uI-MLw"/>
-                                            <outlet property="contentImage" destination="u6B-pA-Hwd" id="oyw-zN-spg"/>
                                             <outlet property="titleLabel" destination="ViF-NX-idh" id="8aq-do-8AG"/>
                                         </connections>
                                     </tableViewCell>
@@ -449,7 +412,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5TF-PN-hfD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3267.6258992805756" y="-282.41206030150755"/>
+            <point key="canvasLocation" x="3290" y="-283"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="KeU-bB-oqN">
@@ -497,104 +460,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b7U-HO-XvH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="749" y="146"/>
-        </scene>
-        <!--Contacts-->
-        <scene sceneID="uqK-MJ-k9g">
-            <objects>
-                <viewController id="e5z-k0-49y" customClass="ContactsViewController" customModule="Thesis" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="yi7-4x-DBz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="A2h-GC-r9B">
-                                <rect key="frame" x="132" y="315.66666666666669" width="150" height="211.00000000000006"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYn-B1-tW3">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="75"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="75" id="P3U-1G-d2Y"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="ugi-5r-y98"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
-                                        <state key="normal" title="All Contacts"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rf6-yi-yFl">
-                                        <rect key="frame" x="0.0" y="136" width="150" height="75"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="75" id="mJW-im-Qt1"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="rqj-98-gQp"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
-                                        <state key="normal" title="Create New"/>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="A2h-GC-r9B" firstAttribute="centerX" secondItem="yi7-4x-DBz" secondAttribute="centerX" id="6HR-LU-tuD"/>
-                            <constraint firstItem="A2h-GC-r9B" firstAttribute="centerY" secondItem="yi7-4x-DBz" secondAttribute="centerY" id="yBH-qQ-BlN"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="Hug-Kb-1gh"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Contacts" id="Jam-WP-Run"/>
-                    <connections>
-                        <outlet property="allContactsBtn" destination="oYn-B1-tW3" id="QoM-sk-eHh"/>
-                        <outlet property="createNewBtn" destination="rf6-yi-yFl" id="EGn-s3-TQk"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9ph-8h-iLp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1659" y="844"/>
-        </scene>
-        <!--Estimates-->
-        <scene sceneID="2az-mC-peM">
-            <objects>
-                <viewController id="Hmc-dU-mn7" customClass="EstimatesViewController" customModule="Thesis" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dNt-Bz-Gsn">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="Sdg-Xc-xoQ">
-                                <rect key="frame" x="132" y="315.66666666666669" width="150" height="211.00000000000006"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKz-uP-M7s">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="75"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="75" id="Qr2-9R-0fw"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="lkX-sx-oiJ"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
-                                        <state key="normal" title="All Estimates"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6aR-op-jzT">
-                                        <rect key="frame" x="0.0" y="136" width="150" height="75"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="75" id="AFG-hb-Shq"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="jZq-zF-ZUe"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
-                                        <state key="normal" title="Create New"/>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="Sdg-Xc-xoQ" firstAttribute="centerY" secondItem="dNt-Bz-Gsn" secondAttribute="centerY" id="eOm-Ka-eLV"/>
-                            <constraint firstItem="Sdg-Xc-xoQ" firstAttribute="centerX" secondItem="dNt-Bz-Gsn" secondAttribute="centerX" id="g2x-0P-KN5"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="nE7-HW-OXS"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Estimates" id="npn-22-mkz"/>
-                    <connections>
-                        <outlet property="allEstimatesBtn" destination="cKz-uP-M7s" id="2dy-7u-HNI"/>
-                        <outlet property="createNewBtn" destination="6aR-op-jzT" id="81W-hh-JE2"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="q3X-9D-Tvh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2532" y="362"/>
         </scene>
     </scenes>
     <resources>
