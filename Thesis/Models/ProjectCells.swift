@@ -9,10 +9,25 @@
 import UIKit
 
 class ProjectCells: UITableViewCell {
-
-	@IBOutlet weak var TitleLabel: UILabel!
-	@IBOutlet weak var AddressLabel: UILabel!
-	@IBOutlet weak var ProjectImage: UIImageView!
 	
+	@IBOutlet weak var contentImage: UIImageView!
+	@IBOutlet weak var titleLabel: UILabel!
+	@IBOutlet weak var addressLabel: UILabel!
 	
+	override func awakeFromNib() {
+		super.awakeFromNib()
+		
+		setUpElements()
+	}
+	
+	func setUpElements() {
+		Utilities.styleCircleImageWithBorder(contentImage)
+	}
+	override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
+	func set(project:Project) {
+		titleLabel.text = project.title
+		addressLabel.text = project.address
+	}
 }

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import FirebaseAuth
 class accessViewController: UIViewController {
 	@IBOutlet weak var emailTextField: UITextField!
 	@IBOutlet weak var passwordTextField: UITextField!
@@ -18,8 +18,10 @@ class accessViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view.
-		
 		setUpElements()
+		
+		Auth.auth().signIn(withEmail: "test@avenconstruction.com", password: "123456789") { [weak self] authResult, error in guard self != nil else {return}
+		}
 	}
 	
 	func setUpElements() {

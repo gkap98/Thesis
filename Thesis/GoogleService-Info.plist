@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>16909362494-ar3489l3kh6k9bn7efamqu09ncf28mf9.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.16909362494-ar3489l3kh6k9bn7efamqu09ncf28mf9</string>
+	<key>API_KEY</key>
+	<string>AIzaSyD6nujGiOxbiaZH7dycdmtgE4nSTdnFUwY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>16909362494</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Gavin-Kaepernick.Thesis</string>
+	<key>PROJECT_ID</key>
+	<string>thesis-96ecd</string>
+	<key>STORAGE_BUCKET</key>
+	<string>thesis-96ecd.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:16909362494:ios:57e59b5f954ec4c421786f</string>
+	<key>DATABASE_URL</key>
+	<string>https://thesis-96ecd.firebaseio.com</string>
+</dict>
+</plist>
