@@ -13,6 +13,8 @@ class ProjectCells: UITableViewCell {
 	@IBOutlet weak var titleLabel: UILabel!
 	@IBOutlet weak var addressLabel: UILabel!
 	
+
+	
 	override func awakeFromNib() {
 		super.awakeFromNib()
 		

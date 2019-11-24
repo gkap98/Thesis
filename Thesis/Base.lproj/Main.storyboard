@@ -151,7 +151,7 @@
         <!--PROJECTS-->
         <scene sceneID="hNT-Ei-hhd">
             <objects>
-                <viewController id="lUR-Zy-idI" sceneMemberID="viewController">
+                <viewController id="lUR-Zy-idI" customClass="ProjectList" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sj4-25-n2p">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -160,7 +160,7 @@
                                 <rect key="frame" x="0.0" y="56" width="414" height="752"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="prototypeProjectCell" rowHeight="125" id="PaD-R1-zpQ" customClass="ProjectCells" customModule="Thesis" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="projectCell" rowHeight="125" id="PaD-R1-zpQ" customClass="ProjectList">
                                         <rect key="frame" x="0.0" y="28" width="414" height="125"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PaD-R1-zpQ" id="Y2r-h4-kcO">
@@ -203,8 +203,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="addressLabel" destination="wgv-vY-CEm" id="n7T-uI-MLw"/>
-                                            <outlet property="titleLabel" destination="ViF-NX-idh" id="8aq-do-8AG"/>
+                                            <outlet property="addressLabel" destination="wgv-vY-CEm" id="Zi3-0R-Tbq"/>
+                                            <outlet property="titleLabel" destination="ViF-NX-idh" id="NyP-hF-nfQ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -237,7 +237,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qkd-Nv-lkg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2532" y="-282"/>
+            <point key="canvasLocation" x="2594" y="145"/>
         </scene>
         <!--PROJECT-->
         <scene sceneID="2U3-Hs-deE">
@@ -253,7 +253,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vwe-YT-qIA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3266.666666666667" y="-947.54464285714278"/>
+            <point key="canvasLocation" x="2594" y="844"/>
         </scene>
         <!--CREATE NEW PROJECT-->
         <scene sceneID="rZK-QR-xDE">
@@ -412,7 +412,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5TF-PN-hfD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3290" y="-283"/>
+            <point key="canvasLocation" x="3371" y="145"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="KeU-bB-oqN">

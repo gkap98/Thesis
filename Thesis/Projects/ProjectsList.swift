@@ -11,16 +11,20 @@ import Foundation
 import Firebase
 
 struct Project {
-	//var image: UIImage
 	var title: String
 	var address: String
 }
 
 class ProjectsList: UIViewController, UITableViewDelegate, UITableViewDataSource {
-	var tableView: UITableView!
 	var projects = [Project]()
 	
-	
+	override func viewDidLoad() {
+		  super.viewDidLoad()
+		  // THIS IS WHERE THE INFORMATION FROM THE DATABASE HAS TO GET TAKEN IN FOR THE TABLE CELLS
+		  
+		  observeProject() 	// Function Above Knows What To Do
+	  }
+
 	
 	func observeProject() {
 		let projectRef = Database.database().reference().child("Projects")
@@ -40,7 +44,6 @@ class ProjectsList: UIViewController, UITableViewDelegate, UITableViewDataSource
 				}
 			}
 			self.projects = tempProjects
-			self.tableView.reloadData()
 		})
 	}
 	
@@ -54,16 +57,10 @@ class ProjectsList: UIViewController, UITableViewDelegate, UITableViewDataSource
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCell(withIdentifier: "prototypeProjectCell", for: indexPath) as! ProjectCells
+		let cell = tableView.dequeueReusableCell(withIdentifier: "projectCell", for: indexPath) as! ProjectCells
 		cell.set(project: projects[indexPath.row])
 		return cell
 	}
 	
-    override func viewDidLoad() {
-        super.viewDidLoad()
-		// THIS IS WHERE THE INFORMATION FROM THE DATABASE HAS TO GET TAKEN IN FOR THE TABLE CELLS
-		
-		observeProject() 	// Function Above Knows What To Do
-    }
-
+  
 }
