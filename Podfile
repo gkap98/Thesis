@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+#platform :ios
 
 target 'Thesis' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -9,5 +9,7 @@ target 'Thesis' do
     pod 'Firebase/Analytics'
     pod 'Firebase'
     pod 'Firebase/Database'
-		pod 'Firebase/Auth'
+		pod 'Firebase/Core'
+		pod 'FirebaseUI/Email'
+		
 end

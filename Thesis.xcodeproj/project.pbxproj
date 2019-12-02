@@ -15,6 +15,8 @@
 		F1611FB2236B3EBC007DD83D /* MainNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1611FB1236B3EBC007DD83D /* MainNavController.swift */; };
 		F1611FB6236B41E5007DD83D /* accessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1611FB5236B41E5007DD83D /* accessViewController.swift */; };
 		F1611FB8236B49F9007DD83D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1611FB7236B49F9007DD83D /* HomeViewController.swift */; };
+		F185759B239590E300462771 /* welcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F185759A239590E300462771 /* welcomeViewController.swift */; };
+		F185759E2395C68400462771 /* adminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F185759D2395C68400462771 /* adminViewController.swift */; };
 		F1AA1A192375EC330079652B /* ProjectDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA1A182375EC330079652B /* ProjectDetails.swift */; };
 		F1E29D4323690CAF00EF8B14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E29D4223690CAF00EF8B14 /* AppDelegate.swift */; };
 		F1E29D4523690CAF00EF8B14 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E29D4423690CAF00EF8B14 /* SceneDelegate.swift */; };
@@ -37,6 +39,8 @@
 		F1611FB1236B3EBC007DD83D /* MainNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavController.swift; sourceTree = "<group>"; };
 		F1611FB5236B41E5007DD83D /* accessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = accessViewController.swift; sourceTree = "<group>"; };
 		F1611FB7236B49F9007DD83D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F185759A239590E300462771 /* welcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = welcomeViewController.swift; sourceTree = "<group>"; };
+		F185759D2395C68400462771 /* adminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adminViewController.swift; sourceTree = "<group>"; };
 		F1AA1A182375EC330079652B /* ProjectDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetails.swift; sourceTree = "<group>"; };
 		F1E29D3F23690CAF00EF8B14 /* Thesis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Thesis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1E29D4223690CAF00EF8B14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +109,14 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		F185759C2395C62B00462771 /* Admin */ = {
+			isa = PBXGroup;
+			children = (
+				F185759D2395C68400462771 /* adminViewController.swift */,
+			);
+			path = Admin;
+			sourceTree = "<group>";
+		};
 		F1E29D3623690CAF00EF8B14 = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +141,7 @@
 				F10B09DC237B1B8000DB4F24 /* GoogleService-Info.plist */,
 				F160F7182374884D00C8DEA0 /* Projects */,
 				F1079FBE2371DA9F000943EB /* Models */,
+				F185759C2395C62B00462771 /* Admin */,
 				F1E29D5923690E6400EF8B14 /* Design */,
 				F1E29D5C23690EE700EF8B14 /* Views */,
 				F1E29D4223690CAF00EF8B14 /* AppDelegate.swift */,
@@ -157,6 +170,7 @@
 			children = (
 				F1611FB5236B41E5007DD83D /* accessViewController.swift */,
 				F1611FB7236B49F9007DD83D /* HomeViewController.swift */,
+				F185759A239590E300462771 /* welcomeViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -173,6 +187,7 @@
 				F1E29D3C23690CAF00EF8B14 /* Frameworks */,
 				F1E29D3D23690CAF00EF8B14 /* Resources */,
 				17B97E1582F255E5BE182281 /* [CP] Embed Pods Frameworks */,
+				A568D4E49FE28FB0074752AF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -248,6 +263,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Thesis/Pods-Thesis-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A568D4E49FE28FB0074752AF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Thesis/Pods-Thesis-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Thesis/Pods-Thesis-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Thesis/Pods-Thesis-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		CE8885A78F4481583A3F78B6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -281,6 +313,7 @@
 				F1E29D4723690CAF00EF8B14 /* ViewController.swift in Sources */,
 				F1E29D4323690CAF00EF8B14 /* AppDelegate.swift in Sources */,
 				F1E29D4523690CAF00EF8B14 /* SceneDelegate.swift in Sources */,
+				F185759E2395C68400462771 /* adminViewController.swift in Sources */,
 				F1AA1A192375EC330079652B /* ProjectDetails.swift in Sources */,
 				F160F71A2374893300C8DEA0 /* CREATE NEW PROJECTViewController.swift in Sources */,
 				F1611FB8236B49F9007DD83D /* HomeViewController.swift in Sources */,
@@ -289,6 +322,7 @@
 				F1611FB2236B3EBC007DD83D /* MainNavController.swift in Sources */,
 				F1E29D4D23690CAF00EF8B14 /* Thesis.xcdatamodeld in Sources */,
 				F1079FC02371DAD1000943EB /* ProjectCells.swift in Sources */,
+				F185759B239590E300462771 /* welcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

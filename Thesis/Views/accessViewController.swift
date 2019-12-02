@@ -7,27 +7,53 @@
 //
 
 import UIKit
-import FirebaseAuth
+import FirebaseUI
+
 class accessViewController: UIViewController {
-	@IBOutlet weak var emailTextField: UITextField!
-	@IBOutlet weak var passwordTextField: UITextField!
 	@IBOutlet weak var loginBtn: UIButton!
-	@IBOutlet weak var adminBtn: UIButton!
+	@IBOutlet weak var welcomeBtn: UIButton!
 	
-    
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view.
 		setUpElements()
 		
-		Auth.auth().signIn(withEmail: "test@avenconstruction.com", password: "123456789") { [weak self] authResult, error in guard self != nil else {return}
-		}
 	}
 	
 	func setUpElements() {
-		Utilities.stytleTextField(emailTextField)
-		Utilities.stytleTextField(passwordTextField)
 		Utilities.styleFilledBtn(loginBtn)
-		Utilities.styleFilledBtn(adminBtn)
+		Utilities.styleFilledBtn(welcomeBtn)
+	}
+
+	@IBAction func loginTapped(_ sender: Any) {
+		// Get the default UserInterface from Firebase
+		let authUI = FUIAuth.defaultAuthUI()
+		guard authUI != nil else {
+			print("Error Loading UI View Controller")
+			return
+		}
+		// Set user as the delegate
+		authUI?.delegate = self
+		authUI?.providers = [FUIEmailAuth()]
+		// Get referance to the auth UI view controller
+		let authViewController = authUI!.authViewController()
+		// Show the Firebase User Interface
+		self.present(authViewController, animated: true, completion: nil)
+		loginBtn.alpha = 0
+		welcomeBtn.alpha = 1
+	}
+}
+
+extension accessViewController: FUIAuthDelegate {
+	func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {
+		// Check if there was an error
+		if error != nil {
+			// Log the error
+			print("Error Logging In")
+			return
+		}
+		print("Login Sucessful")
+		//authDataResult?.user.uid
+		
 	}
 }
