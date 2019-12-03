@@ -9,7 +9,7 @@ import UIKit
 import MapKit
 import Foundation
 
-class Utilities {
+class DesignUtilities {
 	static func stytleTextField(_ textfield:UITextField) {
 		//-- Create the bottom line
 		let bottomLine = CALayer()

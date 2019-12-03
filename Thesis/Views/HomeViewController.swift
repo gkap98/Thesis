@@ -19,7 +19,7 @@ class HomeViewController: UIViewController {
     }
 	
 	func setUpElements() {
-		Utilities.styleFilledBtn(projectsBtn)
+		DesignUtilities.styleFilledBtn(projectsBtn)
 	}
 	
 }

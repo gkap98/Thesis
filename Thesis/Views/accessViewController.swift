@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import FirebaseAuth
 import FirebaseUI
 
 class accessViewController: UIViewController {
 	@IBOutlet weak var loginBtn: UIButton!
 	@IBOutlet weak var welcomeBtn: UIButton!
+	@IBOutlet weak var logoutBtn: UIButton!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -21,8 +23,9 @@ class accessViewController: UIViewController {
 	}
 	
 	func setUpElements() {
-		Utilities.styleFilledBtn(loginBtn)
-		Utilities.styleFilledBtn(welcomeBtn)
+		DesignUtilities.styleFilledBtn(loginBtn)
+		DesignUtilities.styleFilledBtn(welcomeBtn)
+		DesignUtilities.styleFilledBtn(logoutBtn)
 	}
 
 	@IBAction func loginTapped(_ sender: Any) {
@@ -40,8 +43,25 @@ class accessViewController: UIViewController {
 		// Show the Firebase User Interface
 		self.present(authViewController, animated: true, completion: nil)
 		loginBtn.alpha = 0
+		logoutBtn.alpha = 1
 		welcomeBtn.alpha = 1
 	}
+	
+	@IBAction func logoutTapped(_ sender: Any) {
+		do {
+			try Auth.auth().signOut()
+			let alert = UIAlertController(title: "Logout", message: "Sucessfully Logged Out", preferredStyle: .alert)
+			self.present(alert, animated: true)
+			alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
+			loginBtn.alpha = 1
+			logoutBtn.alpha = 0
+			welcomeBtn.alpha = 0
+		} catch {
+			print(error)
+		}
+	}
+	
+	
 }
 
 extension accessViewController: FUIAuthDelegate {

@@ -20,8 +20,8 @@ class welcomeViewController: UIViewController {
     }
     
 	func setUpElements() {
-		Utilities.styleFilledBtn(welcomeBtn)
-		Utilities.styleFilledBtn(adminBtn)
+		DesignUtilities.styleFilledBtn(welcomeBtn)
+		DesignUtilities.styleFilledBtn(adminBtn)
 	}
 
 }

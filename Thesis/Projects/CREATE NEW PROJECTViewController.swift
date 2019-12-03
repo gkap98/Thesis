@@ -32,9 +32,9 @@ class CREATE_NEW_PROJECTViewController: UIViewController {
     }
     
 	func setUpElements() {
-		Utilities.styleFilledBtn(addPhotoBtn)
-		Utilities.styleCircleImageWithBorder(projectImage)
-		Utilities.styleFilledBtn(completeProjectBtn)
+		DesignUtilities.styleFilledBtn(addPhotoBtn)
+		DesignUtilities.styleCircleImageWithBorder(projectImage)
+		DesignUtilities.styleFilledBtn(completeProjectBtn)
 	}
 	
 	@IBAction func addProjectImage(_ sender: Any) {
