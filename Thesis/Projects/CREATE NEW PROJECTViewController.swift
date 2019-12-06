@@ -50,6 +50,7 @@ class CREATE_NEW_PROJECTViewController: UIViewController {
 	// Show Camera and Pictures from Library
 	var imagePicker: UIImagePickerController!
 	var takenImage: UIImage!
+	var imageDownloadURL: String?
 	@IBAction func addProjectImage(_ sender: Any) {
 		imagePicker = UIImagePickerController()
 		imagePicker.delegate = self
@@ -65,9 +66,23 @@ class CREATE_NEW_PROJECTViewController: UIViewController {
 	
 	@IBAction func completeProjectBtn(_ sender: Any) {
 		
-		// Firebase Code goes here
-		let projectRef = Database.database().reference().child("Projects").childByAutoId()
 		
+		// 1.0 - Firebase Database references Code goes here
+		let projectRef = Database.database().reference().child("Projects").childByAutoId()
+		let newProjectKey = projectRef.key!			// Key allows us to use as a reference in the storage
+		
+		// 2.0 - Convert the image from UIImage to JPEG data
+		if let imageData = projectImage.image!.jpegData(compressionQuality: 0.6) {
+			// 3.0 - Firebase Storage references Code goes here
+			let imageStorageRef = Storage.storage().reference().child("Images")
+			let newImageStorageRef = imageStorageRef.child(newProjectKey)
+			
+			newImageStorageRef.putData(imageData).observe(.success) { (snapshot) in
+				self.imageDownloadURL = snapshot.metadata?.path
+			}
+		}
+		
+		// Building document for adding a project.
 		let projectObject = [
 			"title" : titleTextField.text!,
 			"streetAddrs" : streetAddressTextField.text!,
@@ -76,7 +91,8 @@ class CREATE_NEW_PROJECTViewController: UIViewController {
 			"zip" : zipTextField.text!,
 			"totalCost" : totalCostTextField.text!,
 			"start" : startYearTextField.text!,
-			"end" : endYearTextField.text!
+			"end" : endYearTextField.text!,
+			"projectImageURL" : newProjectKey
 		] as [String:Any]
 		
 		projectRef.setValue(projectObject, withCompletionBlock: { error, ref in
