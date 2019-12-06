@@ -6,10 +6,11 @@ target 'Thesis' do
   use_frameworks!
 
   # Pods for Thesis
-    pod 'Firebase/Analytics'
     pod 'Firebase'
     pod 'Firebase/Database'
 		pod 'Firebase/Core'
 		pod 'FirebaseUI/Email'
+		pod 'Firebase/Storage'
+		pod 'SwiftyJSON'
 		
 end

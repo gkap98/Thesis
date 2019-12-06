@@ -24,6 +24,7 @@ class CREATE_NEW_PROJECTViewController: UIViewController {
 	@IBOutlet weak var startYearTextField: UITextField!
 	@IBOutlet weak var endYearTextField: UITextField!
 	
+	
 	override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,11 +36,33 @@ class CREATE_NEW_PROJECTViewController: UIViewController {
 		DesignUtilities.styleFilledBtn(addPhotoBtn)
 		DesignUtilities.styleCircleImageWithBorder(projectImage)
 		DesignUtilities.styleFilledBtn(completeProjectBtn)
+		
+		DesignUtilities.styleUnderlinedTextField(titleTextField)
+		DesignUtilities.styleUnderlinedTextField(streetAddressTextField)
+		DesignUtilities.styleUnderlinedTextField(cityTextField)
+		DesignUtilities.styleUnderlinedTextField(stateTextField)
+		DesignUtilities.styleUnderlinedTextField(zipTextField)
+		DesignUtilities.styleUnderlinedTextField(totalCostTextField)
+		DesignUtilities.styleUnderlinedTextField(startYearTextField)
+		DesignUtilities.styleUnderlinedTextField(endYearTextField)
 	}
 	
+	// Show Camera and Pictures from Library
+	var imagePicker: UIImagePickerController!
+	var takenImage: UIImage!
 	@IBAction func addProjectImage(_ sender: Any) {
-		projectImage.alpha = 1
+		imagePicker = UIImagePickerController()
+		imagePicker.delegate = self
+		
+		if UIImagePickerController.isSourceTypeAvailable(.camera) {
+			imagePicker.sourceType = .camera
+			imagePicker.cameraCaptureMode = .photo
+		} else {
+			imagePicker.sourceType = .photoLibrary
+		}
+		self.present(imagePicker, animated: false, completion: nil)
 	}
+	
 	@IBAction func completeProjectBtn(_ sender: Any) {
 		
 		// Firebase Code goes here
@@ -61,8 +84,30 @@ class CREATE_NEW_PROJECTViewController: UIViewController {
 				self.dismiss(animated: true, completion: nil)
 			} else {
 				// HANDLE POST ERROR
+				print("Error Handling Post")
 			}
 		})
 	}
 	
 }
+
+
+extension CREATE_NEW_PROJECTViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+	func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+		let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+		self.takenImage = image
+		self.projectImage.image = self.takenImage
+		self.dismiss(animated: true, completion: nil)
+	}
+	
+	func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+		self.dismiss(animated: true, completion: nil)
+	}
+}
+
+
+
+
+
+
+

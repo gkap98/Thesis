@@ -10,7 +10,7 @@ import MapKit
 import Foundation
 
 class DesignUtilities {
-	static func stytleTextField(_ textfield:UITextField) {
+	static func styleUnderlinedTextField(_ textfield:UITextField) {
 		//-- Create the bottom line
 		let bottomLine = CALayer()
 		bottomLine.frame = CGRect(x: 0, y: textfield.frame.height - 2, width: textfield.frame.width, height: 2)
@@ -26,7 +26,7 @@ class DesignUtilities {
 	static func styleFilledBtn(_ button:UIButton) {
 		//-- Filled rounded corner style
 		button.backgroundColor = #colorLiteral(red: 0.1960784346, green: 0.3411764801, blue: 0.1019607857, alpha: 1)
-		button.layer.cornerRadius = 15.0
+		button.layer.cornerRadius = 9.0
 		button.tintColor = UIColor.white
 	}
 	

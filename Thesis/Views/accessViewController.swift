@@ -26,6 +26,8 @@ class accessViewController: UIViewController {
 		DesignUtilities.styleFilledBtn(loginBtn)
 		DesignUtilities.styleFilledBtn(welcomeBtn)
 		DesignUtilities.styleFilledBtn(logoutBtn)
+		welcomeBtn.alpha = 0
+		logoutBtn.alpha = 0
 	}
 
 	@IBAction func loginTapped(_ sender: Any) {
@@ -42,9 +44,7 @@ class accessViewController: UIViewController {
 		let authViewController = authUI!.authViewController()
 		// Show the Firebase User Interface
 		self.present(authViewController, animated: true, completion: nil)
-		loginBtn.alpha = 0
-		logoutBtn.alpha = 1
-		welcomeBtn.alpha = 1
+		
 	}
 	
 	@IBAction func logoutTapped(_ sender: Any) {
@@ -60,8 +60,6 @@ class accessViewController: UIViewController {
 			print(error)
 		}
 	}
-	
-	
 }
 
 extension accessViewController: FUIAuthDelegate {
@@ -72,6 +70,9 @@ extension accessViewController: FUIAuthDelegate {
 			print("Error Logging In")
 			return
 		}
+		loginBtn.alpha = 0
+		logoutBtn.alpha = 1
+		welcomeBtn.alpha = 1
 		print("Login Sucessful")
 		//authDataResult?.user.uid
 		

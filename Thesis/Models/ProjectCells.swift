@@ -27,8 +27,8 @@ class ProjectCells: UITableViewCell {
 	override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-	func set(project:Project) {
-		titleLabel.text = project.title
-		addressLabel.text = project.address
-	}
+//	func set(project:Project) {
+//		titleLabel.text = project.title
+//		addressLabel.text = project.address
+//	}
 }

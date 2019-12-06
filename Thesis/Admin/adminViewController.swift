@@ -23,10 +23,10 @@ class adminViewController: UIViewController {
     }
     
 	func setUpElements() {
-		DesignUtilities.stytleTextField(changeEmailTextField)
+		DesignUtilities.styleUnderlinedTextField(changeEmailTextField)
 		DesignUtilities.styleFilledBtn(changeEmailBtn)
 		
-		DesignUtilities.stytleTextField(changePasswordTextField)
+		DesignUtilities.styleUnderlinedTextField(changePasswordTextField)
 		DesignUtilities.styleFilledBtn(changePasswordBtn)
 	}
 	
