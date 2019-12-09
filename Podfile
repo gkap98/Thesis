@@ -10,7 +10,7 @@ target 'Thesis' do
     pod 'Firebase/Database'
 		pod 'Firebase/Core'
 		pod 'FirebaseUI/Email'
-		pod 'Firebase/Storage'
+		pod 'FirebaseUI/Storage'
 		pod 'SwiftyJSON'
 		
 end

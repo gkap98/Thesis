@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5F0C83DDF8A3DCF521965A48 /* Pods_Thesis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8032BBD6415AE6AE1506C87F /* Pods_Thesis.framework */; };
-		F1079FC02371DAD1000943EB /* ProjectCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1079FBF2371DAD1000943EB /* ProjectCells.swift */; };
 		F10B09DD237B1B8000DB4F24 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F10B09DC237B1B8000DB4F24 /* GoogleService-Info.plist */; };
+		F117993F239DF2CA00CC2AC1 /* ProjectsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F117993E239DF2CA00CC2AC1 /* ProjectsTableViewController.swift */; };
 		F160F71A2374893300C8DEA0 /* CREATE NEW PROJECTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F160F7192374893300C8DEA0 /* CREATE NEW PROJECTViewController.swift */; };
 		F1611FB2236B3EBC007DD83D /* MainNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1611FB1236B3EBC007DD83D /* MainNavController.swift */; };
 		F1611FB6236B41E5007DD83D /* accessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1611FB5236B41E5007DD83D /* accessViewController.swift */; };
@@ -17,7 +17,6 @@
 		F17AD4B2239AD8DE009E1C98 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F17AD4B1239AD8DE009E1C98 /* Default-568h@2x.png */; };
 		F185759B239590E300462771 /* welcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F185759A239590E300462771 /* welcomeViewController.swift */; };
 		F185759E2395C68400462771 /* adminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F185759D2395C68400462771 /* adminViewController.swift */; };
-		F1BC0B862399775B0068C1DF /* ProjectListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BC0B852399775B0068C1DF /* ProjectListViewController.swift */; };
 		F1BC0B88239978BE0068C1DF /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BC0B87239978BE0068C1DF /* Project.swift */; };
 		F1E29D4323690CAF00EF8B14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E29D4223690CAF00EF8B14 /* AppDelegate.swift */; };
 		F1E29D4523690CAF00EF8B14 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E29D4423690CAF00EF8B14 /* SceneDelegate.swift */; };
@@ -33,8 +32,8 @@
 		8032BBD6415AE6AE1506C87F /* Pods_Thesis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Thesis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C38092C1E8CF59AE253650 /* Pods-Thesis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thesis.debug.xcconfig"; path = "Target Support Files/Pods-Thesis/Pods-Thesis.debug.xcconfig"; sourceTree = "<group>"; };
 		E02C26758B4D9CF5E1E2E6E6 /* Pods-Thesis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thesis.release.xcconfig"; path = "Target Support Files/Pods-Thesis/Pods-Thesis.release.xcconfig"; sourceTree = "<group>"; };
-		F1079FBF2371DAD1000943EB /* ProjectCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCells.swift; sourceTree = "<group>"; };
 		F10B09DC237B1B8000DB4F24 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F117993E239DF2CA00CC2AC1 /* ProjectsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsTableViewController.swift; sourceTree = "<group>"; };
 		F160F7192374893300C8DEA0 /* CREATE NEW PROJECTViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CREATE NEW PROJECTViewController.swift"; sourceTree = "<group>"; };
 		F1611FB1236B3EBC007DD83D /* MainNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavController.swift; sourceTree = "<group>"; };
 		F1611FB5236B41E5007DD83D /* accessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = accessViewController.swift; sourceTree = "<group>"; };
@@ -42,7 +41,6 @@
 		F17AD4B1239AD8DE009E1C98 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		F185759A239590E300462771 /* welcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = welcomeViewController.swift; sourceTree = "<group>"; };
 		F185759D2395C68400462771 /* adminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adminViewController.swift; sourceTree = "<group>"; };
-		F1BC0B852399775B0068C1DF /* ProjectListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListViewController.swift; sourceTree = "<group>"; };
 		F1BC0B87239978BE0068C1DF /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		F1E29D3F23690CAF00EF8B14 /* Thesis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Thesis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1E29D4223690CAF00EF8B14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,24 +86,16 @@
 		F1079FBE2371DA9F000943EB /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F1079FBF2371DAD1000943EB /* ProjectCells.swift */,
+				F1BC0B87239978BE0068C1DF /* Project.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		F13C47112395E7290088832F /* Global Functions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Global Functions";
 			sourceTree = "<group>";
 		};
 		F160F7182374884D00C8DEA0 /* Projects */ = {
 			isa = PBXGroup;
 			children = (
 				F160F7192374893300C8DEA0 /* CREATE NEW PROJECTViewController.swift */,
-				F1BC0B852399775B0068C1DF /* ProjectListViewController.swift */,
-				F1BC0B87239978BE0068C1DF /* Project.swift */,
+				F117993E239DF2CA00CC2AC1 /* ProjectsTableViewController.swift */,
 			);
 			path = Projects;
 			sourceTree = "<group>";
@@ -148,7 +138,6 @@
 		F1E29D4123690CAF00EF8B14 /* Thesis */ = {
 			isa = PBXGroup;
 			children = (
-				F13C47112395E7290088832F /* Global Functions */,
 				F10B09DC237B1B8000DB4F24 /* GoogleService-Info.plist */,
 				F160F7182374884D00C8DEA0 /* Projects */,
 				F1079FBE2371DA9F000943EB /* Models */,
@@ -322,18 +311,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1E29D4723690CAF00EF8B14 /* ViewController.swift in Sources */,
-				F1BC0B862399775B0068C1DF /* ProjectListViewController.swift in Sources */,
 				F1E29D4323690CAF00EF8B14 /* AppDelegate.swift in Sources */,
 				F1E29D4523690CAF00EF8B14 /* SceneDelegate.swift in Sources */,
 				F185759E2395C68400462771 /* adminViewController.swift in Sources */,
 				F1BC0B88239978BE0068C1DF /* Project.swift in Sources */,
 				F160F71A2374893300C8DEA0 /* CREATE NEW PROJECTViewController.swift in Sources */,
+				F117993F239DF2CA00CC2AC1 /* ProjectsTableViewController.swift in Sources */,
 				F1611FB8236B49F9007DD83D /* HomeViewController.swift in Sources */,
 				F1611FB6236B41E5007DD83D /* accessViewController.swift in Sources */,
 				F1E29D5B23690E7A00EF8B14 /* DesignUtilities.swift in Sources */,
 				F1611FB2236B3EBC007DD83D /* MainNavController.swift in Sources */,
 				F1E29D4D23690CAF00EF8B14 /* Thesis.xcdatamodeld in Sources */,
-				F1079FC02371DAD1000943EB /* ProjectCells.swift in Sources */,
 				F185759B239590E300462771 /* welcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

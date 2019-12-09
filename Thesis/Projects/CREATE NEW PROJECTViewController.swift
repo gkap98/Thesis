@@ -64,9 +64,8 @@ class CREATE_NEW_PROJECTViewController: UIViewController {
 		self.present(imagePicker, animated: false, completion: nil)
 	}
 	
+	
 	@IBAction func completeProjectBtn(_ sender: Any) {
-		
-		
 		// 1.0 - Firebase Database references Code goes here
 		let projectRef = Database.database().reference().child("Projects").childByAutoId()
 		let newProjectKey = projectRef.key!			// Key allows us to use as a reference in the storage
@@ -77,34 +76,41 @@ class CREATE_NEW_PROJECTViewController: UIViewController {
 			let imageStorageRef = Storage.storage().reference().child("Images")
 			let newImageStorageRef = imageStorageRef.child(newProjectKey)
 			
-			newImageStorageRef.putData(imageData).observe(.success) { (snapshot) in
-				self.imageDownloadURL = snapshot.metadata?.path
+			newImageStorageRef.putData(imageData, metadata: nil) { (metadata, error) in
+				if error != nil {
+					print("Error Storing Photo")
+					return
+				} else {
+					print("Image Successfully Stored")
+					self.imageDownloadURL = metadata!.path
+					
+					// Building document for adding a project.
+					let projectObject = [
+						"title" : self.titleTextField.text!,
+						"streetAddrs" : self.streetAddressTextField.text!,
+						"city" : self.cityTextField.text!,
+						"state" : self.stateTextField.text!,
+						"zip" : self.zipTextField.text!,
+						"totalCost" : self.totalCostTextField.text!,
+						"start" : self.startYearTextField.text!,
+						"end" : self.endYearTextField.text!,
+						"projectImageURL" : metadata!.path!
+					] as [String:Any]
+					
+					projectRef.setValue(projectObject, withCompletionBlock: { error, ref in
+						if error == nil {
+							self.dismiss(animated: true, completion: nil)
+						} else {
+							// HANDLE POST ERROR
+							print("Error Handling Post")
+						}
+					})
+				}
 			}
 		}
 		
-		// Building document for adding a project.
-		let projectObject = [
-			"title" : titleTextField.text!,
-			"streetAddrs" : streetAddressTextField.text!,
-			"city" : cityTextField.text!,
-			"state" : stateTextField.text!,
-			"zip" : zipTextField.text!,
-			"totalCost" : totalCostTextField.text!,
-			"start" : startYearTextField.text!,
-			"end" : endYearTextField.text!,
-			"projectImageURL" : newProjectKey
-		] as [String:Any]
 		
-		projectRef.setValue(projectObject, withCompletionBlock: { error, ref in
-			if error == nil {
-				self.dismiss(animated: true, completion: nil)
-			} else {
-				// HANDLE POST ERROR
-				print("Error Handling Post")
-			}
-		})
 	}
-	
 }
 
 
@@ -117,6 +123,7 @@ extension CREATE_NEW_PROJECTViewController: UIImagePickerControllerDelegate, UIN
 	}
 	
 	func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+		print("Image Picker Canceled")
 		self.dismiss(animated: true, completion: nil)
 	}
 }
