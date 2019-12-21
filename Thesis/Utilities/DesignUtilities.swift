@@ -32,11 +32,12 @@ class DesignUtilities {
 	
 	static func styleCircleImageWithBorder(_ image:UIImageView) {
 		//-- Trim Image and Style
-		image.layer.borderWidth = 4
+		image.layer.borderWidth = 3
 		image.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
 		image.layer.masksToBounds = false
 		image.layer.cornerRadius = image.frame.height / 2
 		image.clipsToBounds = true
+		image.layer.shadowRadius = 10
 	}
 	
 	static func styleLabel(_ label:UILabel) {

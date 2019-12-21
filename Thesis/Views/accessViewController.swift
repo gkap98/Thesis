@@ -75,6 +75,5 @@ extension accessViewController: FUIAuthDelegate {
 		welcomeBtn.alpha = 1
 		print("Login Sucessful")
 		//authDataResult?.user.uid
-		
 	}
 }

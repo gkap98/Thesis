@@ -71,48 +71,83 @@ class CREATE_NEW_PROJECTViewController: UIViewController {
 		let newProjectKey = projectRef.key!			// Key allows us to use as a reference in the storage
 		
 		// 2.0 - Convert the image from UIImage to JPEG data
-		if let imageData = projectImage.image!.jpegData(compressionQuality: 0.6) {
-			// 3.0 - Firebase Storage references Code goes here
-			let imageStorageRef = Storage.storage().reference().child("Images")
-			let newImageStorageRef = imageStorageRef.child(newProjectKey)
-			
-			newImageStorageRef.putData(imageData, metadata: nil) { (metadata, error) in
-				if error != nil {
-					print("Error Storing Photo")
+		// Create data from image
+		guard let image = projectImage.image, let data = image.jpegData(compressionQuality: 0.4) else {
+			// Show error
+			let alert = UIAlertController(title: "Error", message: "Something when wrong", preferredStyle: .alert)
+			self.present(alert, animated: true)
+			alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
+			return
+		}
+		let imageName = UUID().uuidString
+		let imageReference = Storage.storage().reference().child("Images").child(imageName)
+		
+		imageReference.putData(data, metadata: nil) { (metadata, error) in
+			if let error = error {
+				// Show error in application
+				let alert = UIAlertController(title: "Error", message: "Something went wrong adding image to firebase", preferredStyle: .alert)
+				self.present(alert, animated: true)
+				alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
+				// Show error in console log
+				print("Error Loading image data to firebase")
+				print(error.localizedDescription)
+				return
+			}
+			imageReference.downloadURL { (url, error) in
+				if let error = error {
+					// Show error in application
+					let alert = UIAlertController(title: "Error", message: "Something went wrong adding image to firebase", preferredStyle: .alert)
+					self.present(alert, animated: true)
+					alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
+					// Show error in console log
+					print("Error Loading image data to firebase")
+					print(error.localizedDescription)
 					return
-				} else {
-					print("Image Successfully Stored")
-					self.imageDownloadURL = metadata!.path
+				}
+				guard let url = url else {
+					print("Something went wrong getting url")
+					return
+				}
+				
+				let urlString = url.absoluteString
+				
+				// Create Data for database
+				let data = [
+					"title" : self.titleTextField.text!,
+					"streetAddrs" : self.streetAddressTextField.text!,
+					"city" : self.cityTextField.text!,
+					"state" : self.stateTextField.text!,
+					"zip" : self.zipTextField.text!,
+					"totalCost" : self.totalCostTextField.text!,
+					"start" : self.startYearTextField.text!,
+					"end" : self.endYearTextField.text!,
+					"projectID" : newProjectKey,
+					"imageURL" : urlString
+				] as [String:Any]
+				
+				projectRef.setValue(data) { (error, ref) in
+					if let error = error {
+						// Show error in application
+						let alert = UIAlertController(title: "Error", message: "Something went wrong adding Data to Database", preferredStyle: .alert)
+						self.present(alert, animated: true)
+						alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
+						// Show error in console log
+						print("Error Loading data to firebase")
+						print(error.localizedDescription)
+						return
+					}
 					
-					// Building document for adding a project.
-					let projectObject = [
-						"title" : self.titleTextField.text!,
-						"streetAddrs" : self.streetAddressTextField.text!,
-						"city" : self.cityTextField.text!,
-						"state" : self.stateTextField.text!,
-						"zip" : self.zipTextField.text!,
-						"totalCost" : self.totalCostTextField.text!,
-						"start" : self.startYearTextField.text!,
-						"end" : self.endYearTextField.text!,
-						"projectImageURL" : metadata!.path!
-					] as [String:Any]
+					UserDefaults.standard.set(newProjectKey, forKey: "projectID")
 					
-					projectRef.setValue(projectObject, withCompletionBlock: { error, ref in
-						if error == nil {
-							self.dismiss(animated: true, completion: nil)
-						} else {
-							// HANDLE POST ERROR
-							print("Error Handling Post")
-						}
-					})
+					let alert = UIAlertController(title: "Success", message: "Please press the back button to see all projects ", preferredStyle: .alert)
+					self.present(alert, animated: true)
+					alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
+					
 				}
 			}
 		}
-		
-		
 	}
 }
-
 
 extension CREATE_NEW_PROJECTViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 	func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {

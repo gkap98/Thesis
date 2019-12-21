@@ -10,13 +10,15 @@ import Foundation
 import UIKit
 
 class Project {
-	var title: String
-	var address: String
-	var image: UIImage
+	var title: String?
+	var address: String?
+	var image: String?
+	var id: String?
 	
-	init(titled: String, address: String, imageName: String) {
+	init(titled: String, address: String, imageName: String, id: String) {
 		self.title = titled
 		self.address = address
-		self.image = UIImage(named: imageName)!
+		self.image = imageName
+		self.id = id
 	}
 }

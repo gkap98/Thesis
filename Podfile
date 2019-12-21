@@ -12,5 +12,6 @@ target 'Thesis' do
 		pod 'FirebaseUI/Email'
 		pod 'FirebaseUI/Storage'
 		pod 'SwiftyJSON'
+		pod 'Kingfisher'
 		
 end
