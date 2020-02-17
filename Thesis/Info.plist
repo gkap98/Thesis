@@ -4,6 +4,8 @@
 <dict>
 	<key>NSCameraUsageDescription</key>
 	<string>$(PRODUCT_NAME) requires access to your camera</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>$(PRODUCT_NAME) would like access to your location in order to accuratly display the map</string>
 	<key>NSPhotoUsageDescription</key>
 	<string>$(PRODUCT_NAME) requires access to your photos library</string>
 	<key>CFBundleDevelopmentRegion</key>

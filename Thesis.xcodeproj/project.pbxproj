@@ -7,20 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5F0C83DDF8A3DCF521965A48 /* Pods_Thesis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8032BBD6415AE6AE1506C87F /* Pods_Thesis.framework */; };
+		23DD8385D509A5E6CE2392A5 /* libPods-Thesis.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1FEF81DDA7068FA3CB82ABB /* libPods-Thesis.a */; };
 		F10B09DD237B1B8000DB4F24 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F10B09DC237B1B8000DB4F24 /* GoogleService-Info.plist */; };
-		F117993F239DF2CA00CC2AC1 /* ProjectsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F117993E239DF2CA00CC2AC1 /* ProjectsTableViewController.swift */; };
+		F10B2B8523F09ABC00DBDBCC /* ProjectListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10B2B8423F09ABC00DBDBCC /* ProjectListCell.swift */; };
+		F10B2B8723F0A44C00DBDBCC /* ProjectListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10B2B8623F0A44C00DBDBCC /* ProjectListViewController.swift */; };
+		F12A5ECE23F6F57C0007AFF6 /* AddCharVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12A5ECD23F6F57C0007AFF6 /* AddCharVC.swift */; };
+		F1343A3F23F32655001C5040 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1343A3E23F32655001C5040 /* PhotosViewController.swift */; };
+		F1343A4123F32669001C5040 /* PhotosCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1343A4023F32669001C5040 /* PhotosCell.swift */; };
+		F13B43CA23B0352A00F271D2 /* CustomPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13B43C923B0352A00F271D2 /* CustomPin.swift */; };
 		F160F71A2374893300C8DEA0 /* CREATE NEW PROJECTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F160F7192374893300C8DEA0 /* CREATE NEW PROJECTViewController.swift */; };
 		F1611FB2236B3EBC007DD83D /* MainNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1611FB1236B3EBC007DD83D /* MainNavController.swift */; };
 		F1611FB6236B41E5007DD83D /* accessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1611FB5236B41E5007DD83D /* accessViewController.swift */; };
 		F1611FB8236B49F9007DD83D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1611FB7236B49F9007DD83D /* HomeViewController.swift */; };
 		F17AD4B2239AD8DE009E1C98 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F17AD4B1239AD8DE009E1C98 /* Default-568h@2x.png */; };
+		F18027F923F452F700581078 /* BigPhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18027F823F452F700581078 /* BigPhotoVC.swift */; };
+		F18027FC23F4887700581078 /* PhotosHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18027FB23F4887700581078 /* PhotosHomeViewController.swift */; };
+		F18027FE23F488D800581078 /* PhotosHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18027FD23F488D800581078 /* PhotosHomeCell.swift */; };
+		F1839C6023AF08D100E7A9A2 /* ProjectDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1839C5F23AF08D100E7A9A2 /* ProjectDetailTableViewController.swift */; };
 		F185759B239590E300462771 /* welcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F185759A239590E300462771 /* welcomeViewController.swift */; };
 		F185759E2395C68400462771 /* adminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F185759D2395C68400462771 /* adminViewController.swift */; };
+		F197F52323F6320900D336E4 /* AllPhotosVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F197F52223F6320900D336E4 /* AllPhotosVC.swift */; };
+		F197F52523F63BC400D336E4 /* InstagramLikeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F197F52423F63BC400D336E4 /* InstagramLikeCell.swift */; };
 		F1BC0B88239978BE0068C1DF /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BC0B87239978BE0068C1DF /* Project.swift */; };
+		F1D0784223B5CE1500528646 /* PhotoDescripters.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D0784123B5CE1500528646 /* PhotoDescripters.swift */; };
+		F1D0784423B5D38D00528646 /* addPhotoAndDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D0784323B5D38D00528646 /* addPhotoAndDescriptionViewController.swift */; };
 		F1E29D4323690CAF00EF8B14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E29D4223690CAF00EF8B14 /* AppDelegate.swift */; };
 		F1E29D4523690CAF00EF8B14 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E29D4423690CAF00EF8B14 /* SceneDelegate.swift */; };
-		F1E29D4723690CAF00EF8B14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E29D4623690CAF00EF8B14 /* ViewController.swift */; };
 		F1E29D4A23690CAF00EF8B14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1E29D4823690CAF00EF8B14 /* Main.storyboard */; };
 		F1E29D4D23690CAF00EF8B14 /* Thesis.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F1E29D4B23690CAF00EF8B14 /* Thesis.xcdatamodeld */; };
 		F1E29D4F23690CAF00EF8B14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1E29D4E23690CAF00EF8B14 /* Assets.xcassets */; };
@@ -29,29 +41,41 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8032BBD6415AE6AE1506C87F /* Pods_Thesis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Thesis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C38092C1E8CF59AE253650 /* Pods-Thesis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thesis.debug.xcconfig"; path = "Target Support Files/Pods-Thesis/Pods-Thesis.debug.xcconfig"; sourceTree = "<group>"; };
 		E02C26758B4D9CF5E1E2E6E6 /* Pods-Thesis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thesis.release.xcconfig"; path = "Target Support Files/Pods-Thesis/Pods-Thesis.release.xcconfig"; sourceTree = "<group>"; };
 		F10B09DC237B1B8000DB4F24 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		F117993E239DF2CA00CC2AC1 /* ProjectsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsTableViewController.swift; sourceTree = "<group>"; };
+		F10B2B8423F09ABC00DBDBCC /* ProjectListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListCell.swift; sourceTree = "<group>"; };
+		F10B2B8623F0A44C00DBDBCC /* ProjectListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListViewController.swift; sourceTree = "<group>"; };
+		F12A5ECD23F6F57C0007AFF6 /* AddCharVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCharVC.swift; sourceTree = "<group>"; };
+		F1343A3E23F32655001C5040 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		F1343A4023F32669001C5040 /* PhotosCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCell.swift; sourceTree = "<group>"; };
+		F13B43C923B0352A00F271D2 /* CustomPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPin.swift; sourceTree = "<group>"; };
 		F160F7192374893300C8DEA0 /* CREATE NEW PROJECTViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CREATE NEW PROJECTViewController.swift"; sourceTree = "<group>"; };
 		F1611FB1236B3EBC007DD83D /* MainNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavController.swift; sourceTree = "<group>"; };
 		F1611FB5236B41E5007DD83D /* accessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = accessViewController.swift; sourceTree = "<group>"; };
 		F1611FB7236B49F9007DD83D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F17AD4B1239AD8DE009E1C98 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		F18027F823F452F700581078 /* BigPhotoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigPhotoVC.swift; sourceTree = "<group>"; };
+		F18027FB23F4887700581078 /* PhotosHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosHomeViewController.swift; sourceTree = "<group>"; };
+		F18027FD23F488D800581078 /* PhotosHomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosHomeCell.swift; sourceTree = "<group>"; };
+		F1839C5F23AF08D100E7A9A2 /* ProjectDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailTableViewController.swift; sourceTree = "<group>"; };
 		F185759A239590E300462771 /* welcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = welcomeViewController.swift; sourceTree = "<group>"; };
 		F185759D2395C68400462771 /* adminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adminViewController.swift; sourceTree = "<group>"; };
+		F197F52223F6320900D336E4 /* AllPhotosVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPhotosVC.swift; sourceTree = "<group>"; };
+		F197F52423F63BC400D336E4 /* InstagramLikeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramLikeCell.swift; sourceTree = "<group>"; };
 		F1BC0B87239978BE0068C1DF /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		F1D0784123B5CE1500528646 /* PhotoDescripters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDescripters.swift; sourceTree = "<group>"; };
+		F1D0784323B5D38D00528646 /* addPhotoAndDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addPhotoAndDescriptionViewController.swift; sourceTree = "<group>"; };
 		F1E29D3F23690CAF00EF8B14 /* Thesis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Thesis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1E29D4223690CAF00EF8B14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1E29D4423690CAF00EF8B14 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F1E29D4623690CAF00EF8B14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F1E29D4923690CAF00EF8B14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F1E29D4C23690CAF00EF8B14 /* Thesis.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Thesis.xcdatamodel; sourceTree = "<group>"; };
 		F1E29D4E23690CAF00EF8B14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1E29D5123690CAF00EF8B14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F1E29D5323690CAF00EF8B14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1E29D5A23690E7A00EF8B14 /* DesignUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignUtilities.swift; sourceTree = "<group>"; };
+		F1FEF81DDA7068FA3CB82ABB /* libPods-Thesis.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Thesis.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F0C83DDF8A3DCF521965A48 /* Pods_Thesis.framework in Frameworks */,
+				23DD8385D509A5E6CE2392A5 /* libPods-Thesis.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,7 +102,7 @@
 		D63A1F4750109EA4D0206B45 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8032BBD6415AE6AE1506C87F /* Pods_Thesis.framework */,
+				F1FEF81DDA7068FA3CB82ABB /* libPods-Thesis.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -86,7 +110,7 @@
 		F1079FBE2371DA9F000943EB /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F1BC0B87239978BE0068C1DF /* Project.swift */,
+				F13B43C923B0352A00F271D2 /* CustomPin.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -94,8 +118,11 @@
 		F160F7182374884D00C8DEA0 /* Projects */ = {
 			isa = PBXGroup;
 			children = (
-				F160F7192374893300C8DEA0 /* CREATE NEW PROJECTViewController.swift */,
-				F117993E239DF2CA00CC2AC1 /* ProjectsTableViewController.swift */,
+				F186258223D0CE8000AA5D3A /* Project Models */,
+				F186258123D0CE6900AA5D3A /* Projects List TVC */,
+				F186258023D0CE5A00AA5D3A /* Create Project */,
+				F186257F23D0CE3900AA5D3A /* Project Details */,
+				F186257E23D0CE2900AA5D3A /* Photos and Descriptions */,
 			);
 			path = Projects;
 			sourceTree = "<group>";
@@ -108,12 +135,69 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		F18027FA23F4885200581078 /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				F18027FB23F4887700581078 /* PhotosHomeViewController.swift */,
+				F18027FD23F488D800581078 /* PhotosHomeCell.swift */,
+				F197F52223F6320900D336E4 /* AllPhotosVC.swift */,
+				F197F52423F63BC400D336E4 /* InstagramLikeCell.swift */,
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
 		F185759C2395C62B00462771 /* Admin */ = {
 			isa = PBXGroup;
 			children = (
 				F185759D2395C68400462771 /* adminViewController.swift */,
 			);
 			path = Admin;
+			sourceTree = "<group>";
+		};
+		F186257E23D0CE2900AA5D3A /* Photos and Descriptions */ = {
+			isa = PBXGroup;
+			children = (
+				F1D0784323B5D38D00528646 /* addPhotoAndDescriptionViewController.swift */,
+				F1343A3E23F32655001C5040 /* PhotosViewController.swift */,
+				F1343A4023F32669001C5040 /* PhotosCell.swift */,
+				F18027F823F452F700581078 /* BigPhotoVC.swift */,
+			);
+			path = "Photos and Descriptions";
+			sourceTree = "<group>";
+		};
+		F186257F23D0CE3900AA5D3A /* Project Details */ = {
+			isa = PBXGroup;
+			children = (
+				F1839C5F23AF08D100E7A9A2 /* ProjectDetailTableViewController.swift */,
+				F12A5ECD23F6F57C0007AFF6 /* AddCharVC.swift */,
+			);
+			path = "Project Details";
+			sourceTree = "<group>";
+		};
+		F186258023D0CE5A00AA5D3A /* Create Project */ = {
+			isa = PBXGroup;
+			children = (
+				F160F7192374893300C8DEA0 /* CREATE NEW PROJECTViewController.swift */,
+			);
+			path = "Create Project";
+			sourceTree = "<group>";
+		};
+		F186258123D0CE6900AA5D3A /* Projects List TVC */ = {
+			isa = PBXGroup;
+			children = (
+				F10B2B8623F0A44C00DBDBCC /* ProjectListViewController.swift */,
+				F10B2B8423F09ABC00DBDBCC /* ProjectListCell.swift */,
+			);
+			path = "Projects List TVC";
+			sourceTree = "<group>";
+		};
+		F186258223D0CE8000AA5D3A /* Project Models */ = {
+			isa = PBXGroup;
+			children = (
+				F1BC0B87239978BE0068C1DF /* Project.swift */,
+				F1D0784123B5CE1500528646 /* PhotoDescripters.swift */,
+			);
+			path = "Project Models";
 			sourceTree = "<group>";
 		};
 		F1E29D3623690CAF00EF8B14 = {
@@ -126,6 +210,7 @@
 				D63A1F4750109EA4D0206B45 /* Frameworks */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 1;
 		};
 		F1E29D4023690CAF00EF8B14 /* Products */ = {
 			isa = PBXGroup;
@@ -139,11 +224,12 @@
 			isa = PBXGroup;
 			children = (
 				F10B09DC237B1B8000DB4F24 /* GoogleService-Info.plist */,
+				F18027FA23F4885200581078 /* Photos */,
 				F160F7182374884D00C8DEA0 /* Projects */,
 				F1079FBE2371DA9F000943EB /* Models */,
 				F185759C2395C62B00462771 /* Admin */,
 				F1E29D5923690E6400EF8B14 /* Utilities */,
-				F1E29D5C23690EE700EF8B14 /* Views */,
+				F1E29D5C23690EE700EF8B14 /* Admin and Home Views */,
 				F1E29D4223690CAF00EF8B14 /* AppDelegate.swift */,
 				F1E29D4423690CAF00EF8B14 /* SceneDelegate.swift */,
 				F1E29D4823690CAF00EF8B14 /* Main.storyboard */,
@@ -151,7 +237,6 @@
 				F1E29D5023690CAF00EF8B14 /* LaunchScreen.storyboard */,
 				F1E29D5323690CAF00EF8B14 /* Info.plist */,
 				F1E29D4B23690CAF00EF8B14 /* Thesis.xcdatamodeld */,
-				F1E29D4623690CAF00EF8B14 /* ViewController.swift */,
 				F1611FB0236B3EA7007DD83D /* Controllers */,
 			);
 			path = Thesis;
@@ -165,14 +250,14 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		F1E29D5C23690EE700EF8B14 /* Views */ = {
+		F1E29D5C23690EE700EF8B14 /* Admin and Home Views */ = {
 			isa = PBXGroup;
 			children = (
 				F1611FB5236B41E5007DD83D /* accessViewController.swift */,
 				F1611FB7236B49F9007DD83D /* HomeViewController.swift */,
 				F185759A239590E300462771 /* welcomeViewController.swift */,
 			);
-			path = Views;
+			path = "Admin and Home Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,7 +271,6 @@
 				F1E29D3B23690CAF00EF8B14 /* Sources */,
 				F1E29D3C23690CAF00EF8B14 /* Frameworks */,
 				F1E29D3D23690CAF00EF8B14 /* Resources */,
-				17B97E1582F255E5BE182281 /* [CP] Embed Pods Frameworks */,
 				A568D4E49FE28FB0074752AF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -247,23 +331,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		17B97E1582F255E5BE182281 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Thesis/Pods-Thesis-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Thesis/Pods-Thesis-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Thesis/Pods-Thesis-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		A568D4E49FE28FB0074752AF /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -310,15 +377,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1E29D4723690CAF00EF8B14 /* ViewController.swift in Sources */,
+				F18027F923F452F700581078 /* BigPhotoVC.swift in Sources */,
+				F12A5ECE23F6F57C0007AFF6 /* AddCharVC.swift in Sources */,
+				F10B2B8523F09ABC00DBDBCC /* ProjectListCell.swift in Sources */,
+				F197F52323F6320900D336E4 /* AllPhotosVC.swift in Sources */,
+				F1343A3F23F32655001C5040 /* PhotosViewController.swift in Sources */,
+				F10B2B8723F0A44C00DBDBCC /* ProjectListViewController.swift in Sources */,
+				F18027FC23F4887700581078 /* PhotosHomeViewController.swift in Sources */,
 				F1E29D4323690CAF00EF8B14 /* AppDelegate.swift in Sources */,
 				F1E29D4523690CAF00EF8B14 /* SceneDelegate.swift in Sources */,
 				F185759E2395C68400462771 /* adminViewController.swift in Sources */,
 				F1BC0B88239978BE0068C1DF /* Project.swift in Sources */,
 				F160F71A2374893300C8DEA0 /* CREATE NEW PROJECTViewController.swift in Sources */,
-				F117993F239DF2CA00CC2AC1 /* ProjectsTableViewController.swift in Sources */,
+				F1343A4123F32669001C5040 /* PhotosCell.swift in Sources */,
 				F1611FB8236B49F9007DD83D /* HomeViewController.swift in Sources */,
+				F197F52523F63BC400D336E4 /* InstagramLikeCell.swift in Sources */,
+				F1839C6023AF08D100E7A9A2 /* ProjectDetailTableViewController.swift in Sources */,
+				F13B43CA23B0352A00F271D2 /* CustomPin.swift in Sources */,
 				F1611FB6236B41E5007DD83D /* accessViewController.swift in Sources */,
+				F1D0784223B5CE1500528646 /* PhotoDescripters.swift in Sources */,
+				F1D0784423B5D38D00528646 /* addPhotoAndDescriptionViewController.swift in Sources */,
+				F18027FE23F488D800581078 /* PhotosHomeCell.swift in Sources */,
 				F1E29D5B23690E7A00EF8B14 /* DesignUtilities.swift in Sources */,
 				F1611FB2236B3EBC007DD83D /* MainNavController.swift in Sources */,
 				F1E29D4D23690CAF00EF8B14 /* Thesis.xcdatamodeld in Sources */,
