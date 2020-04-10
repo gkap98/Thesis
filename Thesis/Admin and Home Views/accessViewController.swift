@@ -8,21 +8,43 @@
 
 import UIKit
 import FirebaseAuth
+import UIGradient
 import FirebaseUI
 
 class accessViewController: UIViewController {
+	
+	var gradientLayer: CAGradientLayer!
+	
+	@IBOutlet weak var back: UIView!
+	
 	@IBOutlet weak var loginBtn: UIButton!
 	@IBOutlet weak var welcomeBtn: UIButton!
 	@IBOutlet weak var logoutBtn: UIButton!
-	
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view.
-		setUpElements()
 		
+		setUpElements()
+		overrideUserInterfaceStyle = .dark
+	}
+	
+	override func viewWillAppear(_ animated: Bool) {
+		createGradientLayer()
+	}
+
+	func createGradientLayer() {
+		gradientLayer = CAGradientLayer()
+	 
+		gradientLayer.frame = self.view.bounds
+	 
+		gradientLayer.colors = [DesignUtilities.Color.darkEnd.cgColor, DesignUtilities.Color.darkStart.cgColor]
+	 
+		self.back.layer.addSublayer(gradientLayer)
 	}
 	
 	func setUpElements() {
+		
 		DesignUtilities.menuStylebutton(loginBtn)
 		DesignUtilities.menuStylebutton(welcomeBtn)
 		DesignUtilities.menuStylebutton(logoutBtn)
@@ -50,9 +72,6 @@ class accessViewController: UIViewController {
 	@IBAction func logoutTapped(_ sender: Any) {
 		do {
 			try Auth.auth().signOut()
-			let alert = UIAlertController(title: "Logout", message: "Sucessfully Logged Out", preferredStyle: .alert)
-			self.present(alert, animated: true)
-			alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
 			loginBtn.alpha = 1
 			logoutBtn.alpha = 0
 			welcomeBtn.alpha = 0
@@ -68,12 +87,15 @@ extension accessViewController: FUIAuthDelegate {
 		if error != nil {
 			// Log the error
 			print("Error Logging In")
+			print(error!)
+			let alert = UIAlertController(title: "Error Logging In", message: "Please make sure that you have a valid internet connection.", preferredStyle: .alert)
+			self.present(alert, animated: true)
+			alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
 			return
 		}
 		loginBtn.alpha = 0
 		logoutBtn.alpha = 1
 		welcomeBtn.alpha = 1
 		print("Login Sucessful")
-		//authDataResult?.user.uid
 	}
 }

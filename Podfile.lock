@@ -104,6 +104,7 @@ PODS:
   - SDWebImage (5.3.2):
     - SDWebImage/Core (= 5.3.2)
   - SDWebImage/Core (5.3.2)
+  - UIGradient (1.3.1)
 
 DEPENDENCIES:
   - Firebase
@@ -112,6 +113,7 @@ DEPENDENCIES:
   - FirebaseUI/Email
   - FirebaseUI/Storage
   - Kingfisher
+  - UIGradient
 
 SPEC REPOS:
   trunk:
@@ -135,6 +137,7 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - SDWebImage
+    - UIGradient
 
 SPEC CHECKSUMS:
   Firebase: bc9cfc7a96c73268656d5aaab453ff1b4b530e0e
@@ -157,7 +160,8 @@ SPEC CHECKSUMS:
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   SDWebImage: 6ac2eb96571bff96ecde31a987172c5934a0eb7d
+  UIGradient: 9c7041327bf202b09aab2db7c33fb41f768b19ea
 
-PODFILE CHECKSUM: df2840fbbf5428264b467e7135406f6355522c9b
+PODFILE CHECKSUM: 832aa2d67c89f5b6a52fe71efb880f522339a960
 
 COCOAPODS: 1.8.4

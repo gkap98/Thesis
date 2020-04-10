@@ -17,8 +17,11 @@ class PhotosHomeViewController: UIViewController {
 	}
 
 	var data = [Project]()
+	var searchData = [Project]()
 	var selectedProject: Project!
 	@IBOutlet weak var homeCollectionView: UICollectionView!
+	@IBOutlet weak var addButton: UIButton!
+	@IBOutlet weak var searchBar: UISearchBar!
 	let cellScale: CGFloat = 0.6
 	
     override func viewDidLoad() {
@@ -28,7 +31,10 @@ class PhotosHomeViewController: UIViewController {
 		homeCollectionView.dataSource = self
 		homeCollectionView.delegate = self
 		navigationController?.navigationBar.prefersLargeTitles = true
+		overrideUserInterfaceStyle = .dark
         // Do any additional setup after loading the view.
+		DesignUtilities.styleFloatingActionBtn(addButton)
+		setUpSearchBar()
 		getProjects()
     }
 	
@@ -38,20 +44,22 @@ class PhotosHomeViewController: UIViewController {
 extension PhotosHomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
 	
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		return data.count
+		return searchData.count
 	}
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotosHomeCell", for: indexPath) as! PhotosHomeCell
 		
 		
 		// Cell Design
-		cell.shader.layer.cornerRadius = 10.0
-		cell.shader.layer.masksToBounds = true
-		cell.photo.layer.cornerRadius = 10.0
-		cell.photo.layer.masksToBounds = true
+		cell.layer.borderColor = #colorLiteral(red: 0, green: 1, blue: 0.9658232331, alpha: 1)
+		cell.layer.borderWidth = 2
+		cell.layer.cornerRadius = 9
+
+
 		
-		cell.projectTitle.text = self.data[indexPath.item].title
-		let url = URL(string: self.data[indexPath.row].image!)
+		cell.projectTitle.text = self.searchData[indexPath.item].title
+		cell.projectAddress.text = self.searchData[indexPath.item].address
+		let url = URL(string: self.searchData[indexPath.row].image!)
 		let resource = ImageResource(downloadURL: url!)
 		cell.photo?.kf.setImage(with: resource, completionHandler: { (result) in
 			switch result {
@@ -65,16 +73,17 @@ extension PhotosHomeViewController: UICollectionViewDelegate, UICollectionViewDa
 	}
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		if segue.identifier == "seePhotosSegue" {
-			let photoVC = segue.destination as! AllPhotosVC
-			photoVC.projectID = selectedProject.id
+		if segue.identifier == "showProjectDetail" {
+			let projectDetailVC = segue.destination as! ProjectDetailTableViewController
+			projectDetailVC.selectedProjectID = selectedProject.id
+			projectDetailVC.pinTitleForProject = selectedProject.title
 		}
 	}
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 		let project = data[indexPath.item]
 		selectedProject = project
 		
-		performSegue(withIdentifier: "seePhotosSegue", sender: nil)
+		performSegue(withIdentifier: "showProjectDetail", sender: nil)
 	}
 }
 
@@ -93,9 +102,39 @@ extension PhotosHomeViewController {
 				let projectID = projectDict["Project ID"] as! String
 				
 				self.data.append(Project(titled: title, address: address, imageName: urlString, id: projectID))
+				self.searchData.append(Project(titled: title, address: address, imageName: urlString, id: projectID))
 			}
 			self.homeCollectionView.reloadData()
 			//print(self.projectsArray[0].id!)
 		}
+	}
+
+}
+
+extension PhotosHomeViewController: UISearchBarDelegate {
+	private func setUpSearchBar() {
+		searchBar.delegate = self
+	}
+	func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+		guard !searchText.isEmpty else {
+			searchData = data
+			homeCollectionView.reloadData()
+			searchBar.showsCancelButton = false
+			return
+		}
+		searchBar.showsCancelButton = true
+		searchData = data.filter({ data -> Bool in
+			(
+				(data.title?.lowercased().contains(searchText.lowercased()))! ||
+				(data.address?.lowercased().contains(searchText.lowercased()))!
+			)
+		})
+		homeCollectionView.reloadData()
+	}
+	func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+		searchData = data
+		searchBar.text = ""
+		searchBar.showsCancelButton = false
+		homeCollectionView.reloadData()
 	}
 }

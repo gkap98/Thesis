@@ -9,20 +9,26 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-	@IBOutlet weak var projectsBtn: UIButton!
+	var gradientLayer: CAGradientLayer!
+	
 	@IBOutlet weak var estimatesBtn: UIButton!
+	@IBOutlet weak var contactsBtn: UIButton!
+	@IBOutlet weak var helpBtn: UIButton!
+	@IBOutlet weak var companyTitle: UILabel!
 	
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
 		setUpElements()
+		overrideUserInterfaceStyle = .dark
     }
 	
 	func setUpElements() {
-		DesignUtilities.styleFilledBtn(projectsBtn)
 		DesignUtilities.styleFilledBtn(estimatesBtn)
-
+		DesignUtilities.styleFilledBtn(contactsBtn)
+		DesignUtilities.styleFilledBtn(helpBtn)
 	}
+
 	
 }

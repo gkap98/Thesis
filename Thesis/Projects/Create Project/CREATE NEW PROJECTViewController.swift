@@ -30,6 +30,7 @@ class CREATE_NEW_PROJECTViewController: UIViewController {
 
         // Do any additional setup after loading the view.
 		setUpElements()
+		overrideUserInterfaceStyle = .dark
 		navigationController?.navigationBar.prefersLargeTitles = false
     }
 	// Show Camera and Pictures from Library
@@ -67,7 +68,7 @@ class CREATE_NEW_PROJECTViewController: UIViewController {
 			return
 		}
 		let imageName = UUID().uuidString
-		let imageReference = Storage.storage().reference().child("Images").child(imageName)
+		let imageReference = Storage.storage().reference().child("Project Images").child(imageName)
 		
 		imageReference.putData(data, metadata: nil) { (metadata, error) in
 			if let error = error {

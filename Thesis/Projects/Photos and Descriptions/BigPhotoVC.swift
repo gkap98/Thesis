@@ -21,7 +21,7 @@ class BigPhotoVC: UIViewController {
         super.viewDidLoad()
 		getPhoto()
 		photo.layer.shadowRadius = 10
-		photo.layer.cornerRadius = 3
+		photo.layer.cornerRadius = 9
 		
 		photoDescription.text = desc
     }

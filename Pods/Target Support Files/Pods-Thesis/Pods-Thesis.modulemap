@@ -1,4 +1,4 @@
-module Pods_Thesis {
+framework module Pods_Thesis {
   umbrella header "Pods-Thesis-umbrella.h"
 
   export *

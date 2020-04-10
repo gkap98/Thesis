@@ -50,11 +50,11 @@ extension AllPhotosVC: UICollectionViewDelegate, UICollectionViewDataSource {
 			}
 		})
 		
-		cell.cellPhoto.layer.cornerRadius = 10
+		cell.cellPhoto.layer.cornerRadius = 9.0
 		cell.cellPhoto.layer.masksToBounds = false
-		cell.contentView.layer.cornerRadius = 4
+		cell.contentView.layer.cornerRadius = 9.0
         cell.contentView.layer.borderWidth = 1.0
-        cell.contentView.layer.borderColor = #colorLiteral(red: 0.3333333433, green: 0.3333333433, blue: 0.3333333433, alpha: 1)
+		cell.contentView.layer.borderColor = DesignUtilities.getMasterColor()
         cell.contentView.layer.masksToBounds = false
 		cell.layer.masksToBounds = false
 		return cell

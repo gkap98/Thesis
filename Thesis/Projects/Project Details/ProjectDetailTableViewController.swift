@@ -25,9 +25,10 @@ class ProjectDetailTableViewController: UITableViewController {
 	@IBOutlet weak var startYear: UILabel!
 	@IBOutlet weak var endYear: UILabel!
 	@IBOutlet weak var cost: UILabel!
-	@IBOutlet weak var uid: UILabel!
 	@IBOutlet weak var picDiscrptBtn: UIButton!
 	@IBOutlet weak var addCharacteristicBtn: UIButton!
+	@IBOutlet weak var upperViewLine: UIView!
+	@IBOutlet weak var lowerViewLine: UIView!
 	var selectedProjectID: String?
 	var pinTitleForProject: String?
 	var projectAddress: String?
@@ -40,25 +41,19 @@ class ProjectDetailTableViewController: UITableViewController {
 		getProjectDetail()
 		DesignUtilities.styleCircleImageWithBorder(projectImage)
 		projectImage.layer.shadowRadius = 12.0
-		projectImage.layer.shadowColor = #colorLiteral(red: 0.02118486725, green: 0.1695403755, blue: 0.2873623371, alpha: 1)
+		map.layer.cornerRadius = 9
+		projectImage.layer.shadowColor = DesignUtilities.getMasterColor()
+		upperViewLine.backgroundColor = UIColor.fromGradientWithDirection(.topLeftToBottomRight, frame: upperViewLine.frame, colors: [#colorLiteral(red: 1, green: 0.2078431373, blue: 0.05882352941, alpha: 1),#colorLiteral(red: 1, green: 0.3326185644, blue: 0.5128910542, alpha: 1)])
+		lowerViewLine.backgroundColor = UIColor.fromGradientWithDirection(.topLeftToBottomRight, frame: lowerViewLine.frame, colors: [#colorLiteral(red: 1, green: 0.2078431373, blue: 0.05882352941, alpha: 1),#colorLiteral(red: 1, green: 0.3326185644, blue: 0.5128910542, alpha: 1)])
 		DesignUtilities.menuStylebutton(picDiscrptBtn)
 		DesignUtilities.menuStylebutton(addCharacteristicBtn)
 		checkLocationServices()
+		overrideUserInterfaceStyle = .dark
 	}
-	
-		
 		
 	// MARK: - MapKit Code
 		let locationManager = CLLocationManager()
 		let regionInMeters: Double = 5000
-	/*
-		func centerViewOnUserLocation() {
-			if let location = locationManager.location?.coordinate {
-				let region = MKCoordinateRegion.init(center: location, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
-				map.setRegion(region, animated: true)
-			}
-		}
-	*/
 
 
 	// MARK: - Button Actions
@@ -82,10 +77,11 @@ class ProjectDetailTableViewController: UITableViewController {
 // MARK: - MapKit Delegate Extension
 extension ProjectDetailTableViewController: CLLocationManagerDelegate {
 	func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-		
+		// NEED for Location manager in setUpLocationManager
 	}
 	
 	func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+		// NEED for location manager in setUpLocationManager
 	}
 }
 
@@ -166,7 +162,7 @@ extension ProjectDetailTableViewController {
 			let title = projectDict!["Title"] as? String
 			let address = projectDict!["Street Address"] as? String
 			let urlString = projectDict!["Image URL"] as? String
-			let projectID = projectDict!["projectID"] as? String
+			let projectID = projectDict!["Project ID"] as? String
 			let city = projectDict!["City"] as? String
 			let state = projectDict!["State"] as? String
 			let zip = projectDict!["Zip"] as? String
@@ -193,12 +189,9 @@ extension ProjectDetailTableViewController {
 			self.startYear.text = start
 			self.endYear.text = end
 			self.cost.text = cost
-			self.uid.text = projectID
 			
 		}
 	}
-	
-	
 }
 
 

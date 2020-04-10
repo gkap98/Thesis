@@ -12,4 +12,6 @@ class PhotosHomeCell: UICollectionViewCell {
 	@IBOutlet weak var photo: UIImageView!
 	@IBOutlet weak var shader: UIView!
 	@IBOutlet weak var projectTitle: UILabel!
+	@IBOutlet weak var projectAddress: UILabel!
+	
 }

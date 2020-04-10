@@ -10,6 +10,4 @@ import UIKit
 
 class PhotosCell: UICollectionViewCell {
 	@IBOutlet weak var cellPhoto: UIImageView!
-
-	
 }

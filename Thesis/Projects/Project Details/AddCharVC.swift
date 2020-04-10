@@ -23,6 +23,7 @@ class AddCharVC: UIViewController {
         // Do any additional setup after loading the view.
 		DesignUtilities.menuStylebutton(addPairBtn)
 		DesignUtilities.styleUnderlinedTextField(keyTextField)
+		overrideUserInterfaceStyle = .dark
 		DesignUtilities.styleUnderlinedTextField(valueTextField)
 	}
 	@IBAction func addCharBtnTapped(_ sender: Any) {

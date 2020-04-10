@@ -15,14 +15,20 @@ class PhotosViewController: UIViewController {
 
 	@IBOutlet weak var photosCollectionView: UICollectionView!
 	@IBOutlet weak var addPhotoBtn: UIButton!
+	@IBOutlet weak var seeAllPhotosBtn: UIButton!
 	
 	var data = [PhotoDescriptors]()
 	var projectID : String?
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
+		// Do any additional setup after loading the view.
+		// Setup buttons
+		DesignUtilities.styleFloatingActionBtn(addPhotoBtn)
+		DesignUtilities.styleFloatingActionBtn(seeAllPhotosBtn)
 
-        // Do any additional setup after loading the view.
+
+		
 		navigationController?.navigationBar.prefersLargeTitles = true
 		photosCollectionView.delegate = self
 		photosCollectionView.dataSource = self
@@ -43,6 +49,7 @@ class PhotosViewController: UIViewController {
 		
 		photosCollectionView.setCollectionViewLayout(layout, animated: true)
 		
+		overrideUserInterfaceStyle = .dark
 		
 		getPhotoData()
 		
@@ -61,6 +68,10 @@ class PhotosViewController: UIViewController {
 			let bigPhoto = segue.destination as! BigPhotoVC
 			bigPhoto.imageName = selectedPhoto?.imageName
 			bigPhoto.desc = selectedPhoto?.photoDescription
+		}
+		if segue.identifier == "seeAllPhotos" {
+			let seePhotoVC = segue.destination as! AllPhotosVC
+			seePhotoVC.projectID = projectID
 		}
 	}
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -84,8 +95,10 @@ extension PhotosViewController: UICollectionViewDelegate, UICollectionViewDataSo
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotosCell", for: indexPath) as! PhotosCell
 
 		
-		cell.layer.cornerRadius = 5
-		cell.layer.masksToBounds = true
+		cell.layer.cornerRadius = 9
+		cell.cellPhoto.layer.cornerRadius = 9
+		cell.layer.borderWidth = 2
+		cell.layer.borderColor = DesignUtilities.getMasterColor()
 		
 		let url = URL(string: self.data[indexPath.item].imageName!)
 		let resource = ImageResource(downloadURL: url!)
@@ -97,13 +110,6 @@ extension PhotosViewController: UICollectionViewDelegate, UICollectionViewDataSo
 				print(error.localizedDescription)
 			}
 		})
-		
-		
-		cell.contentView.layer.cornerRadius = 4
-        cell.contentView.layer.borderWidth = 1.0
-        cell.contentView.layer.borderColor = UIColor.clear.cgColor
-        cell.contentView.layer.masksToBounds = false
-		cell.layer.masksToBounds = false
 		return cell
 	}
 }
@@ -111,27 +117,25 @@ extension PhotosViewController: UICollectionViewDelegate, UICollectionViewDataSo
 // MARK: - Extension Functions
 extension PhotosViewController {
 	func getPhotoData() {
-		self.data = []
-		
-		let databaseRef = Database.database().reference().child("Projects").child(projectID!).child("Photos")
-		databaseRef.observeSingleEvent(of: .value) { (snapshot) in
-			for snap in snapshot.children {
-				let databaseSnap = snap as! DataSnapshot
-				let key = databaseSnap.key
+	self.data = []
+	
+	let databaseRef = Database.database().reference().child("Projects").child(projectID!).child("Photos")
+	databaseRef.observeSingleEvent(of: .value) { (snapshot) in
+		for snap in snapshot.children {
+			let databaseSnap = snap as! DataSnapshot
+			let key = databaseSnap.key
+			
+			let ref = databaseRef.child(key)
+			ref.observeSingleEvent(of: .value) { (snapshot) in
+				let dict = snapshot.value as! NSDictionary
+				let imageURL = dict["imageURL"] as! String
+				let photoDescription = dict["description"] as! String
+				let photoID = dict["id"] as! String
 				
-				let ref = databaseRef.child(key)
-				ref.observeSingleEvent(of: .value) { (snapshot) in
-					let dict = snapshot.value as! NSDictionary
-					let imageURL = dict["imageURL"] as! String
-					let photoDescription = dict["description"] as! String
-					let photoID = dict["id"] as! String
-					
-					self.data.append(PhotoDescriptors(imageName: imageURL, photoDescription: photoDescription, id: photoID))
-					self.photosCollectionView.reloadData()
-				}
+				self.data.append(PhotoDescriptors(imageName: imageURL, photoDescription: photoDescription, id: photoID))
+				self.photosCollectionView.reloadData()
 			}
 		}
 	}
-	
-	
+}
 }

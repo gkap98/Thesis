@@ -25,10 +25,12 @@ class addPhotoAndDescriptionViewController: UIViewController {
 		DesignUtilities.menuStylebutton(addPhotoButton)
 		DesignUtilities.menuStylebutton(completeBtn)
 		navigationController?.navigationBar.prefersLargeTitles = false
-		photo.layer.borderWidth = 2.0
-		photo.layer.borderColor = #colorLiteral(red: 0.02118486725, green: 0.1695403755, blue: 0.2873623371, alpha: 1)
-		descriptionTextField.layer.borderColor = #colorLiteral(red: 0.02118486725, green: 0.1695403755, blue: 0.2873623371, alpha: 1)
-		descriptionTextField.layer.borderWidth = 2.0
+		photo.layer.cornerRadius = 9.0
+//		photo.layer.borderWidth = 2.0
+//		photo.layer.borderColor = #colorLiteral(red: 0.02118486725, green: 0.1695403755, blue: 0.2873623371, alpha: 1)
+//		descriptionTextField.layer.borderColor = #colorLiteral(red: 0.02118486725, green: 0.1695403755, blue: 0.2873623371, alpha: 1)
+//		descriptionTextField.layer.borderWidth = 2.0
+		overrideUserInterfaceStyle = .dark
     }
 
 	
@@ -64,7 +66,7 @@ class addPhotoAndDescriptionViewController: UIViewController {
 			 return
 		}
 		let imageName = UUID().uuidString
-		let imageRefernce = Storage.storage().reference().child("Images").child(imageName)
+		let imageRefernce = Storage.storage().reference().child("Project Images").child(imageName)
 		
 		imageRefernce.putData(data, metadata: nil) { (metadata, error) in
 			if let error = error {
