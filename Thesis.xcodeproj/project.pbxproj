@@ -18,7 +18,6 @@
 		F1598A9B243D56900016B6CD /* MySignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1598A9A243D56900016B6CD /* MySignUpViewController.swift */; };
 		F160F71A2374893300C8DEA0 /* CREATE NEW PROJECTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F160F7192374893300C8DEA0 /* CREATE NEW PROJECTViewController.swift */; };
 		F1611FB2236B3EBC007DD83D /* MainNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1611FB1236B3EBC007DD83D /* MainNavController.swift */; };
-		F1611FB6236B41E5007DD83D /* accessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1611FB5236B41E5007DD83D /* accessViewController.swift */; };
 		F1611FB8236B49F9007DD83D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1611FB7236B49F9007DD83D /* HomeViewController.swift */; };
 		F1720FC72404793000E14E6A /* CreateNewContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1720FC62404793000E14E6A /* CreateNewContactVC.swift */; };
 		F17AD4B2239AD8DE009E1C98 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F17AD4B1239AD8DE009E1C98 /* Default-568h@2x.png */; };
@@ -64,7 +63,6 @@
 		F1598A9A243D56900016B6CD /* MySignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySignUpViewController.swift; sourceTree = "<group>"; };
 		F160F7192374893300C8DEA0 /* CREATE NEW PROJECTViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CREATE NEW PROJECTViewController.swift"; sourceTree = "<group>"; };
 		F1611FB1236B3EBC007DD83D /* MainNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavController.swift; sourceTree = "<group>"; };
-		F1611FB5236B41E5007DD83D /* accessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = accessViewController.swift; sourceTree = "<group>"; };
 		F1611FB7236B49F9007DD83D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F1720FC62404793000E14E6A /* CreateNewContactVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewContactVC.swift; sourceTree = "<group>"; };
 		F17AD4B1239AD8DE009E1C98 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -347,7 +345,6 @@
 			isa = PBXGroup;
 			children = (
 				F145A51F240D935C00EAF737 /* help */,
-				F1611FB5236B41E5007DD83D /* accessViewController.swift */,
 				F1611FB7236B49F9007DD83D /* HomeViewController.swift */,
 				F185759A239590E300462771 /* welcomeViewController.swift */,
 			);
@@ -365,8 +362,8 @@
 				F1E29D3B23690CAF00EF8B14 /* Sources */,
 				F1E29D3C23690CAF00EF8B14 /* Frameworks */,
 				F1E29D3D23690CAF00EF8B14 /* Resources */,
-				A568D4E49FE28FB0074752AF /* [CP] Copy Pods Resources */,
 				DBDA94608D215BA79FADE3AD /* [CP] Embed Pods Frameworks */,
+				3BB0ADFA5E2D857AAE3F0616 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -426,7 +423,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		A568D4E49FE28FB0074752AF /* [CP] Copy Pods Resources */ = {
+		3BB0ADFA5E2D857AAE3F0616 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -513,7 +510,6 @@
 				F1598A9B243D56900016B6CD /* MySignUpViewController.swift in Sources */,
 				F1839C6023AF08D100E7A9A2 /* ProjectDetailTableViewController.swift in Sources */,
 				F13B43CA23B0352A00F271D2 /* CustomPin.swift in Sources */,
-				F1611FB6236B41E5007DD83D /* accessViewController.swift in Sources */,
 				F1D12B44243CF77400D0B8C9 /* SignInViewController.swift in Sources */,
 				F1CF4A3823FFA3C300028C67 /* Contact.swift in Sources */,
 				F1D0784223B5CE1500528646 /* PhotoDescripters.swift in Sources */,

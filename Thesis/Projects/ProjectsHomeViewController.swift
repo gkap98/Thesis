@@ -21,7 +21,7 @@ import Kingfisher
 // MARK: - View Controller Extension
 class ProjectsHomeViewController: UIViewController {
 	@IBAction func refreshBtnTapped(_ sender: Any) {
-		viewDidLoad()
+		getProjects()
 	}
 
 	var data = [Project]()
@@ -98,7 +98,7 @@ extension ProjectsHomeViewController: UICollectionViewDelegate, UICollectionView
 //MARK: - Extension Functions
 extension ProjectsHomeViewController {
 	func getProjects() {
-		self.data = []
+		self.searchData = []
 		let projectsRef = Database.database().reference().child("Projects")
 		projectsRef.observeSingleEvent(of: .value) { (snapshot) in
 			for snap in snapshot.children {

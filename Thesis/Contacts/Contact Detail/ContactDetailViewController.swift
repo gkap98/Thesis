@@ -51,7 +51,7 @@ extension ContactDetailViewController {
 			let phone = contactDict!["Phone Number"] as? String
 			let email = contactDict!["Email"] as? String
 			let association = contactDict!["Association"] as? String
-			let id = contactDict!["Contact ID"] as? String
+			//let id = contactDict!["Contact ID"] as? String
 			let urlString = contactDict!["Image URL"] as? String
 			
 			let url = URL(string: urlString!)

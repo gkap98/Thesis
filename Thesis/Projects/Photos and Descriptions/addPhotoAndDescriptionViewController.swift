@@ -117,7 +117,7 @@ class addPhotoAndDescriptionViewController: UIViewController {
 					}
 					
 					UserDefaults.standard.set(newPhotoKey, forKey: "photoID")
-					let alert = UIAlertController(title: "Success", message: "Please press the back button to see all projects ", preferredStyle: .alert)
+					let alert = UIAlertController(title: "Success", message: "Please press the back button to see all photos ", preferredStyle: .alert)
 					self.present(alert, animated: true)
 					alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
 					

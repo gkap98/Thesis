@@ -58,8 +58,6 @@ PODS:
   - FirebaseUI/Auth (8.4.0):
     - Firebase/Auth (~> 6.0)
     - GoogleUtilities/UserDefaults
-  - FirebaseUI/Email (8.4.0):
-    - FirebaseUI/Auth
   - FirebaseUI/Storage (8.4.0):
     - Firebase/Storage (~> 6.0)
     - SDWebImage (~> 5.0)
@@ -110,7 +108,7 @@ DEPENDENCIES:
   - Firebase
   - Firebase/Core
   - Firebase/Database
-  - FirebaseUI/Email
+  - FirebaseUI/Auth
   - FirebaseUI/Storage
   - Kingfisher
   - UIGradient
@@ -162,6 +160,6 @@ SPEC CHECKSUMS:
   SDWebImage: 6ac2eb96571bff96ecde31a987172c5934a0eb7d
   UIGradient: 9c7041327bf202b09aab2db7c33fb41f768b19ea
 
-PODFILE CHECKSUM: 832aa2d67c89f5b6a52fe71efb880f522339a960
+PODFILE CHECKSUM: a3a584d491ee9e1900dec360cdc2f3e4e6b93d88
 
 COCOAPODS: 1.8.4

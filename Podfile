@@ -9,7 +9,7 @@ target 'Thesis' do
     pod 'Firebase'
     pod 'Firebase/Database'
 		pod 'Firebase/Core'
-		pod 'FirebaseUI/Email'
+		pod 'FirebaseUI/Auth'
     pod 'FirebaseUI/Storage'
     pod 'UIGradient'
 		pod 'Kingfisher'

@@ -162,7 +162,7 @@ extension ProjectDetailTableViewController {
 			let title = projectDict!["Title"] as? String
 			let address = projectDict!["Street Address"] as? String
 			let urlString = projectDict!["Image URL"] as? String
-			let projectID = projectDict!["Project ID"] as? String
+			//let projectID = projectDict!["Project ID"] as? String
 			let city = projectDict!["City"] as? String
 			let state = projectDict!["State"] as? String
 			let zip = projectDict!["Zip"] as? String
